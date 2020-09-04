@@ -1,0 +1,30 @@
+{
+ "menu": {
+  "about": {
+   "pl": "o mnie",
+   "en": "about"
+  },
+  "skills": {
+   "pl": "umiejętności",
+   "en": "skills"
+  },
+  "projects": {
+   "pl": "projekty",
+   "en": "projects"
+  },
+  "contact": {
+   "pl": "kontakt",
+   "en": "contact"
+  }
+ },
+ "home": {
+  "title1": {
+   "pl": "junior web developer",
+   "en": "junior web developer"
+  },
+  "title2": {
+   "pl": "programista JavaScript",
+   "en": "JavaScript programmer"
+  }
+ }
+}
