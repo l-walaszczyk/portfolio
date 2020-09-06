@@ -9,7 +9,9 @@ const GlobalStyle = createGlobalStyle`
 body {
  /* background: #2F3F52; */
  font-family: Nunito, Sans-Serif;
- color: black;
+ color: white;
+ font-size: 10px;
+ height: 100vh;
 }
 
 a {
@@ -19,6 +21,14 @@ a {
 
 ul {
  list-style-type: none;
+}
+
+button {
+ font-family: Nunito, Sans-Serif;
+ background-color: transparent;
+ color: white;
+ border: none;
+ cursor: pointer;
 }
 `;
 

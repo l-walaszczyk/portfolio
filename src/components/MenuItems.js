@@ -1,40 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
+import { LangContext } from "../containers/Lang";
+import texts from "../content/texts.json";
 
 const Li = styled.li`
-  width: 100px;
-  line-height: 50px;
   text-align: center;
 `;
 
-const MenuItems = ({ handleMouseLeave }) => {
-  return (
-    <nav onClick={handleMouseLeave}>
-      <ul>
-        <Li>
-          <NavLink to="/about" exact>
-            o mnie
-          </NavLink>
-        </Li>
-        <Li>
-          <NavLink to="/projects" exact>
-            projekty
-          </NavLink>
-        </Li>
-        <Li>
-          <NavLink to="/resume" exact>
-            cv
-          </NavLink>
-        </Li>
-        <Li>
-          <NavLink to="/contact" exact>
-            contact
-          </NavLink>
-        </Li>
-      </ul>
-    </nav>
-  );
+const names = ["about", "skills", "projects", "contact"];
+
+const MenuItems = ({ handleClick, className }) => {
+  const [lang] = useContext(LangContext);
+
+  const items = names.map((name, i) => {
+    return (
+      <Li key={i} className={className}>
+        <NavLink to={`/${name}`} exact onClick={handleClick}>
+          {texts["categories"][name][lang]}
+        </NavLink>
+      </Li>
+    );
+  });
+
+  return <ul>{items}</ul>;
 };
 
 export default MenuItems;

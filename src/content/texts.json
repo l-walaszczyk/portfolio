@@ -1,5 +1,5 @@
 {
- "menu": {
+ "categories": {
   "about": {
    "pl": "o mnie",
    "en": "about"
@@ -25,6 +25,38 @@
   "title2": {
    "pl": "programista JavaScript",
    "en": "JavaScript programmer"
+  }
+ },
+ "about": {
+  "present": {
+   "title": {
+    "pl": "obecnie",
+    "en": "present"
+   },
+   "text": {
+    "pl": "Jestem początkującym web developerem, samoukiem, który zdobywa praktyczną wiedzę poprzez przekrojowe, produkcyjne projekty. Dzięki uniwersalności JavaScript’u i nowym rozwiązaniom JAMstack jestem w stanie realizować projekty w zakresie front i back-endu. Moim stosem technologicznym jest MERN (MongoDB, Express.js, React.js, Node.js), ale uczę się także framework’a Angular.",
+    "en": "I’m a self-taught web developer who gains experience and practical knowledge by creating small-scale commercial projects. Thanks to the versatility of JavaScript and new JAMstack solutions I’m able tackle front-end as well as back-end of a project. My technology stack is MERN (MongoDB, Express.js, React.js, Node.js), but I’m also learning Angular framework."
+   }
+  },
+  "past": {
+   "title": {
+    "pl": "kiedyś",
+    "en": "past"
+   },
+   "text": {
+    "pl": "Z wykształcenia jestem mgr. inż. budownictwa. Zanim zająłem się programowaniem, zajmowałem się projektowaniem konstrukcji stalowych tworząc ich modele w technologii BIM (Building Information Modeling). Dostrzegając potencjał drzemiący w wirtualnych modelach tworzyłem parametryczne komponenty dla powtarzalnych elementów konstrukcji i automatyzowałem czynności dzięki makrom. To właśnie praca w BIM skierowała moje zainteresowania w stronę programowania.",
+    "en": "By education I am a MSc in Civil Engineering. Before I went into programming I had been designing steel structures by creating their models in BIM technology (Building Information Modeling). Recognizing the potential of the virtual models I created parametric components for repetitive elements and automated processes with macros. It was the work in BIM that directed my interest toward programming."
+   }
+  },
+  "interests": {
+   "title": {
+    "pl": "moje pasje",
+    "en": "my interests"
+   },
+   "text": {
+    "pl": "Lubię zdobywać nowe umiejętności i korzystać z nowych możliwości jakie stwarzają - dlatego zdecydowałem się związać swoją przyszłość z IT. Oprócz programowania, podobnie jest z nauką języków i poznawaniem świata - moimi hobby. Poniżej zamieszczam kilka fotografii z moich ulubionych podróży.",
+    "en": "I like learining new skills and benefit from the opportunities that they create - that’s why I decided to pursue a career in IT. Besides programming, it’s similar with learning foreign languages and exploring the world - my hobbies. Below I publish a few photographs from my favourite journeys."
+   }
   }
  }
 }

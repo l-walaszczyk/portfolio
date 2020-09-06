@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import MenuItems from "./MenuItems";
+import LangToggler from "./LangToggler";
 
 const HeaderDesktop = () => {
   return (
@@ -14,12 +16,8 @@ const HeaderDesktop = () => {
       </NavLink>
 
       <nav>
-        <ul>
-          <li>o mnie</li>
-          <li>projekty</li>
-          <li>cv</li>
-          <li>kontakt</li>
-        </ul>
+        <MenuItems />
+        <LangToggler />
       </nav>
     </header>
   );
