@@ -16,7 +16,7 @@ body {
  /* height: 100vh; */
 }
 
-@media (min-width: 360px) {
+@media (min-width: 360px) and (min-height: 360px) {
  :root {
   font-size: 18px;
  }

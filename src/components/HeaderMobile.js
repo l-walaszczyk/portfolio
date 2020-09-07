@@ -14,7 +14,7 @@ const Header = styled.header`
 const H1 = styled.h1`
   position: absolute;
   top: 50%;
-  left: 4vw;
+  left: 1.2rem;
   width: 50vw;
   line-height: 1.1rem;
   transform: translate(0, -50%);
@@ -27,7 +27,7 @@ const H1 = styled.h1`
 const MenuButton = styled.button`
   position: absolute;
   top: 50%;
-  right: 6rem;
+  right: 7rem;
   transform: translate(50%, -50%);
   cursor: pointer;
   color: white;
@@ -41,21 +41,21 @@ const MenuButton = styled.button`
 
 const Nav = styled.nav`
   position: fixed;
-  top: 50px;
-  right: 6rem;
+  top: ${config.headerHeight}px;
+  right: 7rem;
   transform: translate(50%, 0);
 `;
 
 const StyledMenuItems = styled(MenuItems)`
-  /* width: 100px; */
-  line-height: 2.5rem;
+  /* line-height: 2.5rem; */
+  height: 3rem;
   font-size: 1.2rem;
 `;
 
 const StyledLangToggler = styled(LangToggler)`
   position: absolute;
   top: 50%;
-  right: 0.6rem;
+  right: 1.2rem;
   transform: translateY(-50%);
   font-size: 1.2rem;
 `;
@@ -71,20 +71,13 @@ const Div = styled.div`
     rgba(0, 0, 0, 0.75),
     transparent
   );
-  /* opacity: 0.75; */
   z-index: 0;
 `;
 
 const HeaderMobile = () => {
   const [menuOpen, toggleMenu] = useState(false);
 
-  // let timeout;
-
   const handleClick = () => {
-    // clearTimeout(timeout);
-    // timeout = setTimeout(() => {
-    //   toggleMenu(false);
-    // }, 2000);
     toggleMenu(false);
   };
 
@@ -93,10 +86,9 @@ const HeaderMobile = () => {
     <Header className="mobile">
       {menuOpen && (
         <Div
-          onClick={() => {
-            toggleMenu(false);
-            // clearTimeout(timeout);
-          }}
+        // onClick={() => {
+        //   toggleMenu(false);
+        // }}
         />
       )}
       {useLocation().pathname !== "/" && (
@@ -106,7 +98,6 @@ const HeaderMobile = () => {
           exact
           onClick={() => {
             toggleMenu(false);
-            // clearTimeout(timeout);
           }}
         >
           <H1>Łukasz Walaszczyk</H1>
@@ -116,7 +107,6 @@ const HeaderMobile = () => {
       <MenuButton
         onClick={() => {
           toggleMenu(!menuOpen);
-          // clearTimeout(timeout);
         }}
       >
         menu

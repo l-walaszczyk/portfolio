@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { LangContext } from "../containers/Lang";
 import texts from "../content/texts.json";
 import styled from "styled-components/macro";
-import config from "../config/config";
+// import config from "../config/config";
 
 const Container = styled.div`
   position: absolute;
@@ -12,6 +12,7 @@ const Container = styled.div`
   font-style: italic;
 
   h1 {
+    width: 15rem;
     font-size: 2.5rem;
     line-height: 2.5rem;
     margin-bottom: 0.5rem;
@@ -21,15 +22,41 @@ const Container = styled.div`
     font-weight: 300;
     font-size: 1rem;
   }
+
+  @media (min-width: 1024px) {
+    top: 45%;
+    left: 40%;
+
+    h1 {
+      width: 15rem;
+      font-size: 3rem;
+      line-height: 3rem;
+      /* margin-bottom: 1rem; */
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    /* top: 50%; */
+    h1 {
+      width: 25rem;
+      font-size: 4rem;
+      line-height: 4rem;
+      /* margin-bottom: 1rem; */
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 1.25rem;
+    }
+  }
 `;
 
-const Filler = styled.div`
-  /* height: calc(100vh - 50px - 30px); */
-  height: ${(props) =>
-    props.height - config.headerHeight - config.footerHeight}px;
-`;
-
-const Home = ({ height }) => {
+const Home = () => {
   const [lang] = useContext(LangContext);
 
   return (
@@ -39,7 +66,6 @@ const Home = ({ height }) => {
         <h2>{texts["home"]["title1"][lang]}</h2>
         <h2>{texts["home"]["title2"][lang]}</h2>
       </Container>
-      {/* <Filler height={height} /> */}
     </section>
   );
 };

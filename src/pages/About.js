@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { LangContext } from "../containers/Lang";
 import texts from "../content/texts.json";
 import styled from "styled-components/macro";
-import config from "../config/config";
+// import config from "../config/config";
+import present from "../content/images/present.jpg";
+import past from "../content/images/past.jpg";
 
 const Container = styled.div`
-  padding: 3vw;
+  padding: 0 4vw;
 `;
 
 const TextBlock = styled.div`
@@ -13,27 +15,47 @@ const TextBlock = styled.div`
   font-style: italic;
 
   h1 {
-    font-size: 1.2rem;
+    font-weight: 300;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-size: 1rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: justify;
   }
 `;
 
-const About = ({ height }) => {
+const ImageContainer = styled.div`
+  float: right;
+  margin-left: 0.5rem;
+  margin-bottom: -0.2rem;
+  width: 7rem;
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
+`;
+
+const About = () => {
   const [lang] = useContext(LangContext);
 
   return (
     <section className="about">
-      <Container height={height}>
+      <Container>
         <TextBlock>
           <h1>{texts["about"]["present"]["title"][lang]}</h1>
+          <ImageContainer>
+            <img src={present} alt="" />
+          </ImageContainer>
           <p>{texts["about"]["present"]["text"][lang]}</p>
         </TextBlock>
         <TextBlock>
           <h1>{texts["about"]["past"]["title"][lang]}</h1>
+          <ImageContainer>
+            <img src={past} alt="" />
+          </ImageContainer>
           <p>{texts["about"]["past"]["text"][lang]}</p>
         </TextBlock>
         <TextBlock>

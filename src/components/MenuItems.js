@@ -6,6 +6,15 @@ import texts from "../content/texts.json";
 
 const Li = styled.li`
   text-align: center;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+    &.active {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const names = ["about", "skills", "projects", "contact"];

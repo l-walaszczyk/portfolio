@@ -1,5 +1,5 @@
 const config = {
-  headerHeight: 50,
+  headerHeight: 75,
   footerHeight: 50,
 };
 
