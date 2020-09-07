@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { LangContext } from "../containers/Lang";
 import texts from "../content/texts.json";
 import styled from "styled-components/macro";
+import config from "../config/config";
 
 const Container = styled.div`
-  margin: 3vw;
+  padding: 3vw;
 `;
 
 const TextBlock = styled.div`
@@ -21,12 +22,12 @@ const TextBlock = styled.div`
   }
 `;
 
-const About = () => {
+const About = ({ height }) => {
   const [lang] = useContext(LangContext);
 
   return (
     <section className="about">
-      <Container>
+      <Container height={height}>
         <TextBlock>
           <h1>{texts["about"]["present"]["title"][lang]}</h1>
           <p>{texts["about"]["present"]["text"][lang]}</p>

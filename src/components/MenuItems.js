@@ -23,7 +23,7 @@ const MenuItems = ({ handleClick, className }) => {
     );
   });
 
-  return <ul>{items}</ul>;
+  return items;
 };
 
 export default MenuItems;

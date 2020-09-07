@@ -39,7 +39,7 @@ const Home = ({ height }) => {
         <h2>{texts["home"]["title1"][lang]}</h2>
         <h2>{texts["home"]["title2"][lang]}</h2>
       </Container>
-      <Filler height={height} />
+      {/* <Filler height={height} /> */}
     </section>
   );
 };

@@ -3,11 +3,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components/macro";
 import MenuItems from "./MenuItems";
 import LangToggler from "./LangToggler";
+import config from "../config/config";
 
 const Header = styled.header`
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: ${config.headerHeight}px;
 `;
 
 const H1 = styled.h1`
@@ -122,7 +123,9 @@ const HeaderMobile = () => {
       </MenuButton>
       {menuOpen && (
         <Nav>
-          <StyledMenuItems handleClick={handleClick} />
+          <ul>
+            <StyledMenuItems handleClick={handleClick} />
+          </ul>
         </Nav>
       )}
       <StyledLangToggler />

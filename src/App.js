@@ -15,7 +15,13 @@ import "./styles/simplebar-overrides.css";
 import HeaderMobile from "./components/HeaderMobile";
 import HeaderDesktop from "./components/HeaderDesktop";
 import Footer from "./components/Footer";
+import styled from "styled-components/macro";
 import config from "./config/config";
+
+const Main = styled.main`
+  min-height: ${(props) =>
+    props.height - config.headerHeight - config.footerHeight}px;
+`;
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -52,20 +58,24 @@ function App() {
             top: config.headerHeight,
           }}
         >
-          <main>
+          <Main height={height}>
             <Switch>
               <Route
                 path="/"
                 exact
                 render={(props) => <Home {...props} height={height} />}
               />
-              <Route path="/about" exact component={About} />
+              <Route
+                path="/about"
+                exact
+                render={(props) => <About {...props} height={height} />}
+              />
               <Route path="/skills" exact component={Skills} />
               <Route path="/projects" exact component={Projects} />
               <Route path="/contact" exact component={Contact} />
               {/* <Route component={Error404} /> */}
             </Switch>
-          </main>
+          </Main>
           <Footer />
         </SimpleBar>
         {width === undefined ? (
