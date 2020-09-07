@@ -11,7 +11,8 @@ const Container = styled.div`
 `;
 
 const Filler = styled.div`
-  height: calc(100vh - 50px - 30px);
+  /* height: calc(100vh - 50px - 30px); */
+  height: ${(props) => props.height - 50 - 30}px;
 `;
 
 const H1 = styled.h1`
@@ -24,7 +25,7 @@ const H2 = styled.h2`
   font-size: 1rem;
 `;
 
-const Home = () => {
+const Home = ({ height }) => {
   const [lang] = useContext(LangContext);
 
   return (
@@ -34,7 +35,7 @@ const Home = () => {
         <H2>{texts["home"]["title1"][lang]}</H2>
         <H2>{texts["home"]["title2"][lang]}</H2>
       </Container>
-      <Filler />
+      <Filler height={height} />
     </section>
   );
 };

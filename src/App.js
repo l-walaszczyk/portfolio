@@ -18,9 +18,11 @@ import Footer from "./components/Footer";
 
 function App() {
   const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
 
   const handleResize = () => {
     setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   };
 
   useEffect(() => {
@@ -43,7 +45,7 @@ function App() {
       <LangProvider>
         <SimpleBar
           style={{
-            height: "calc(100vh - 50px)",
+            height: height - 50,
             width: "100vw",
             position: "absolute",
             top: 50,
@@ -51,7 +53,11 @@ function App() {
         >
           <main>
             <Switch>
-              <Route path="/" exact component={Home} />
+              <Route
+                path="/"
+                exact
+                render={(props) => <Home {...props} height={height} />}
+              />
               <Route path="/about" exact component={About} />
               <Route path="/skills" exact component={Skills} />
               <Route path="/projects" exact component={Projects} />
@@ -61,7 +67,13 @@ function App() {
           </main>
           <Footer />
         </SimpleBar>
-        {width < 1024 ? <HeaderMobile /> : <HeaderDesktop />}
+        {width === undefined ? (
+          <header></header>
+        ) : width < 1024 ? (
+          <HeaderMobile />
+        ) : (
+          <HeaderDesktop />
+        )}
       </LangProvider>
     </Router>
   );
