@@ -17,8 +17,8 @@ import HeaderDesktop from "./components/HeaderDesktop";
 import Footer from "./components/Footer";
 
 function App() {
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState();
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
   const handleResize = () => {
     setWidth(window.innerWidth);
