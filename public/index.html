@@ -4,7 +4,7 @@
 <head>
  <meta charset="utf-8" />
  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0" />
  <meta name="theme-color" content="#000000" />
  <meta name="description" content="Web site created using create-react-app" />
  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -55,36 +55,11 @@
  <div id="root"></div>
  <div id="bg"></div>
  <script>
-  // function getHeight() {
-  //  var height = document.documentElement.clientHeight;
-  //  return height;
-  // }
-
-  // function getWidth() {
-  //  var width = window.outerWidth;
-  //  return width;
-  // }
-
-  // var bg = document.createElement("div");
-  // bg.id = "bg";
-  // bg.style.position = "fixed";
-  // bg.style.top = "0";
-  // bg.style.zIndex = "-10";
-  // bg.style.width = "100vw";
-  // bg.style.height = "100vh";
-  // bg.style.width = getWidth() + "px";
-  // bg.style.height = getHeight() + "px";
-  // bg.style.overflow = "hidden";
-
-  // document.body.appendChild(bg);
-
   var wavesOptions = {
    el: "#bg",
    mouseControls: true,
    touchControls: true,
-   gyroControls: false,
-   // minHeight: getHeight(),
-   // minWidth: getWidth(),
+   gyroControls: true,
    scale: 2,
    scaleMobile: 4,
    color: 0xe1928,
@@ -92,18 +67,13 @@
    waveSpeed: 0.6,
    zoom: 1,
   };
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+   wavesOptions.waveSpeed = 2;
+   wavesOptions.shininess = 20;
+  }
+
   var effect = VANTA.WAVES(wavesOptions);
-
-  // window.onresize = renderBg;
-
-  // function renderBg() {
-  //  // wavesOptions.minWidth = getWidth();
-  //  // wavesOptions.minHeight = getHeight();
-  //  // bg.style.width = getWidth() + "px";
-  //  // bg.style.height = getHeight() + "px";
-  //  // effect.destroy();
-  //  // effect = VANTA.WAVES(wavesOptions);
-  // }
  </script>
 </body>
 
