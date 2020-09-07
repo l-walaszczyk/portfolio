@@ -9,16 +9,16 @@ const Container = styled.div`
 
 const TextBlock = styled.div`
   margin: 4vh 0;
-`;
-
-const H1 = styled.h1`
   font-style: italic;
-  font-size: 1.2rem;
-`;
 
-const P = styled.p`
-  font-style: italic;
-  font-size: 0.8rem;
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 `;
 
 const About = () => {
@@ -28,16 +28,16 @@ const About = () => {
     <section className="about">
       <Container>
         <TextBlock>
-          <H1>{texts["about"]["present"]["title"][lang]}</H1>
-          <P>{texts["about"]["present"]["text"][lang]}</P>
+          <h1>{texts["about"]["present"]["title"][lang]}</h1>
+          <p>{texts["about"]["present"]["text"][lang]}</p>
         </TextBlock>
         <TextBlock>
-          <H1>{texts["about"]["past"]["title"][lang]}</H1>
-          <P>{texts["about"]["past"]["text"][lang]}</P>
+          <h1>{texts["about"]["past"]["title"][lang]}</h1>
+          <p>{texts["about"]["past"]["text"][lang]}</p>
         </TextBlock>
         <TextBlock>
-          <H1>{texts["about"]["interests"]["title"][lang]}</H1>
-          <P>{texts["about"]["interests"]["text"][lang]}</P>
+          <h1>{texts["about"]["interests"]["title"][lang]}</h1>
+          <p>{texts["about"]["interests"]["text"][lang]}</p>
         </TextBlock>
       </Container>
     </section>

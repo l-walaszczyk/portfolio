@@ -10,43 +10,45 @@ const Header = styled.header`
   height: 50px;
 `;
 
-const Nav = styled.nav`
-  position: fixed;
-  top: 50px;
-  right: 25vw;
-  transform: translate(50%, 0);
-`;
-
 const H1 = styled.h1`
   position: absolute;
   top: 50%;
+  left: 4vw;
+  width: 50vw;
+  line-height: 1.1rem;
   transform: translate(0, -50%);
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-style: italic;
-  margin-left: 2vw;
   padding: 0;
 `;
 
 const MenuButton = styled.button`
   position: absolute;
   top: 50%;
-  right: 25vw;
+  right: 6rem;
   transform: translate(50%, -50%);
   cursor: pointer;
   color: white;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   &:hover {
     text-decoration: underline;
   }
 `;
 
+const Nav = styled.nav`
+  position: fixed;
+  top: 50px;
+  right: 6rem;
+  transform: translate(50%, 0);
+`;
+
 const StyledMenuItems = styled(MenuItems)`
   /* width: 100px; */
   line-height: 2.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 `;
 
 const StyledLangToggler = styled(LangToggler)`
@@ -54,7 +56,7 @@ const StyledLangToggler = styled(LangToggler)`
   top: 50%;
   right: 0.6rem;
   transform: translateY(-50%);
-  font-size: 1rem;
+  font-size: 1.2rem;
 `;
 
 const Div = styled.div`

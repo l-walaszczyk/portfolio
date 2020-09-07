@@ -59,7 +59,7 @@
    el: "#bg",
    mouseControls: true,
    touchControls: true,
-   gyroControls: true,
+   gyroControls: false,
    scale: 2,
    scaleMobile: 4,
    color: 0xe1928,
@@ -69,7 +69,7 @@
   };
 
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-   wavesOptions.waveSpeed = 2;
+   wavesOptions.waveSpeed = 4;
    wavesOptions.shininess = 20;
   }
 

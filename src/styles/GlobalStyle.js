@@ -6,12 +6,20 @@ const GlobalStyle = createGlobalStyle`
  padding: 0;
 }
 
+:root {
+ font-size: 16px;
+}
+
 body {
- /* background: #2F3F52; */
  font-family: Nunito, Sans-Serif;
  color: white;
- font-size: 10px;
- height: 100vh;
+ /* height: 100vh; */
+}
+
+@media (min-width: 360px) {
+ :root {
+  font-size: 18px;
+ }
 }
 
 a {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { LangProvider } from "./containers/Lang";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle";
 import ScrollToTop from "./components/ScrollToTop";
 // import Header from "./components/Header";
@@ -15,6 +15,7 @@ import "./styles/simplebar-overrides.css";
 import HeaderMobile from "./components/HeaderMobile";
 import HeaderDesktop from "./components/HeaderDesktop";
 import Footer from "./components/Footer";
+import config from "./config/config";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -39,16 +40,16 @@ function App() {
   }, []);
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/">
       <GlobalStyle />
       <ScrollToTop />
       <LangProvider>
         <SimpleBar
           style={{
-            height: height - 50,
+            height: height - config.headerHeight,
             width: "100vw",
             position: "absolute",
-            top: 50,
+            top: config.headerHeight,
           }}
         >
           <main>
@@ -75,7 +76,7 @@ function App() {
           <HeaderDesktop />
         )}
       </LangProvider>
-    </Router>
+    </HashRouter>
   );
 }
 
