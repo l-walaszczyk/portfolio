@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Error404 from "./pages/Error404";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 import "./styles/simplebar-overrides.css";
@@ -73,7 +74,7 @@ function App() {
               <Route path="/skills" exact component={Skills} />
               <Route path="/projects" exact component={Projects} />
               <Route path="/contact" exact component={Contact} />
-              {/* <Route component={Error404} /> */}
+              <Route component={Error404} />
             </Switch>
           </Main>
           <Footer />

@@ -4,7 +4,8 @@ import styled from "styled-components/macro";
 
 const Button = styled.button`
   letter-spacing: 0.1rem;
-  /* background-color: red; */
+  font-style: normal;
+  font-weight: 400;
   width: 2rem;
 `;
 

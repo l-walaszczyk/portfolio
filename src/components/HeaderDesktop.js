@@ -16,8 +16,8 @@ const StyledLogo = styled(Logo)`
   top: 50%;
   left: 2rem;
   transform: translate(0, -50%);
+  font-weight: 400;
   font-size: 1.5rem;
-  font-style: italic;
   padding: 0;
 `;
 

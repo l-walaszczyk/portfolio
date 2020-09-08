@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { LangContext } from "../containers/Lang";
-import texts from "../content/texts.json";
+import texts from "../content/texts.js";
 import styled from "styled-components/macro";
 // import config from "../config/config";
 
@@ -11,6 +11,7 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
 
   h1 {
+    font-weight: 400;
     width: 15rem;
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -18,7 +19,6 @@ const Container = styled.div`
   }
 
   h2 {
-    font-weight: 300;
     font-size: 1rem;
   }
 
@@ -52,8 +52,8 @@ const Home = () => {
     <section className="home">
       <Container>
         <h1>Łukasz Walaszczyk</h1>
-        <h2>{texts["home"]["title1"][lang]}</h2>
-        <h2>{texts["home"]["title2"][lang]}</h2>
+        <h2>{texts.home.title1[lang]}</h2>
+        <h2>{texts.home.title2[lang]}</h2>
       </Container>
     </section>
   );

@@ -19,8 +19,8 @@ const StyledLogo = styled(Logo)`
   line-height: 1.1rem;
   transform: translate(0, -50%);
   color: white;
+  font-weight: 400;
   font-size: 1.35rem;
-  font-style: italic;
   padding: 0;
 `;
 
@@ -47,7 +47,6 @@ const Nav = styled.nav`
 `;
 
 const StyledMenuItems = styled(MenuItems)`
-  /* line-height: 2.5rem; */
   height: 3rem;
   font-size: 1.2rem;
 `;
@@ -84,7 +83,13 @@ const HeaderMobile = () => {
   return (
     // <>
     <Header className="mobile">
-      {menuOpen && <Div />}
+      {menuOpen && (
+        <Div
+          onClick={() => {
+            toggleMenu(false);
+          }}
+        />
+      )}
       <StyledLogo
         handleClick={() => {
           toggleMenu(false);

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { LangContext } from "../containers/Lang";
-import texts from "../content/texts.json";
+import texts from "../content/texts.js";
 import styled from "styled-components/macro";
 import present from "../content/images/present.jpg";
 import past from "../content/images/past.jpg";
@@ -36,13 +36,11 @@ const ParagraphContainer = styled.div`
   }
 
   h1 {
-    font-weight: 300;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-weight: 300;
     font-size: 0.8rem;
     line-height: var(--p-lh);
     letter-spacing: 0.045rem;
@@ -77,7 +75,6 @@ const ParagraphContainer = styled.div`
       p {
         text-align: center;
         font-size: 0.8rem;
-        font-weight: 300;
         line-height: 1rem;
       }
     }
@@ -99,7 +96,6 @@ const ParagraphContainer = styled.div`
       p {
         text-align: center;
         font-size: 0.8rem;
-        font-weight: 300;
         line-height: 1rem;
       }
     }
@@ -113,29 +109,29 @@ const About = () => {
     <section className="about">
       {/* <Container> */}
       <ParagraphContainer>
-        <h1>{texts["about"]["present"]["title"][lang]}</h1>
+        <h1>{texts.about.present.title[lang]}</h1>
         <div id="present-img-container">
           <img src={present} alt="" />
         </div>
-        <p>{texts["about"]["present"]["text"][lang]}</p>
+        <p>{texts.about.present.text[lang]}</p>
       </ParagraphContainer>
       <ParagraphContainer>
-        <h1>{texts["about"]["past"]["title"][lang]}</h1>
-        <p>{texts["about"]["past"]["text"][lang]}</p>
+        <h1>{texts.about.past.title[lang]}</h1>
+        <p>{texts.about.past.text[lang]}</p>
         <div id="past-img-container">
           <img src={past} alt="" />
           <div id="caption">
-            <p>{texts["about"]["past"]["img-caption"][lang]}</p>
+            <p>{texts.about.past.imgCaption[lang]}</p>
           </div>
         </div>
       </ParagraphContainer>
       <ParagraphContainer>
-        <h1>{texts["about"]["interests"]["title"][lang]}</h1>
-        <p>{texts["about"]["interests"]["text"][lang]}</p>
+        <h1>{texts.about.interests.title[lang]}</h1>
+        <p>{texts.about.interests.text[lang]}</p>
         <div id="interests-img-container">
           <img src={interests} alt="" />
           <div id="caption">
-            <p>{texts["about"]["interests"]["img-caption"][lang]}</p>
+            <p>{texts.about.interests.imgCaption[lang]}</p>
           </div>
         </div>
       </ParagraphContainer>

@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
 
 body {
  font-family: Nunito, Sans-Serif;
+ font-weight: 300;
+ font-style: italic;
  color: white;
  /* height: 100vh; */
 }
@@ -36,13 +38,8 @@ body {
  }
 }
 
-p {
- font-weight: 300;
- font-style: italic;
-}
-
 h1, h2, h3 {
- font-style: italic;
+ font-weight: 300;
 }
 
 a, button {
