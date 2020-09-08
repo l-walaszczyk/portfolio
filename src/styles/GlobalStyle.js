@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components/macro";
 
+// adobe palette #203149 #579DFF #11161F #FFBD3D #FFCE70
+
 const GlobalStyle = createGlobalStyle`
 * {
  margin: 0;
@@ -22,9 +24,33 @@ body {
  }
 }
 
-a {
+@media (min-width: 640px) and (min-height: 640px) {
+ :root {
+  font-size: 20px;
+ }
+}
+
+@media (min-width: 768px) and (min-height: 768px) {
+ :root {
+  font-size: 22px;
+ }
+}
+
+p {
+ font-weight: 300;
+ font-style: italic;
+}
+
+h1, h2, h3 {
+ font-style: italic;
+}
+
+a, button {
  text-decoration: none;
  color: white;
+ &:hover{
+  color: #FFCE70
+ }
 }
 
 ul {

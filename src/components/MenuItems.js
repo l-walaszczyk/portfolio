@@ -8,11 +8,11 @@ const Li = styled.li`
   text-align: center;
 
   a {
-    &:hover {
-      text-decoration: underline;
-    }
     &.active {
       text-decoration: underline;
+      &:hover {
+        cursor: default;
+      }
     }
   }
 `;

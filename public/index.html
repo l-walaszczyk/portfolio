@@ -33,7 +33,6 @@
   body {
    height: 100%;
    width: 100%;
-   /* overflow: hidden; */
   }
 
   #root {
@@ -46,6 +45,7 @@
    z-index: -10;
    width: 100vw;
    height: 100vh;
+   background-color: #0E1928;
   }
  </style>
 </head>
@@ -62,7 +62,8 @@
    gyroControls: false,
    scale: 2,
    scaleMobile: 4,
-   color: 0xe1928,
+   color: 0x0E1928,
+   // color: 0xe1928,
    shininess: 5,
    waveSpeed: 0.5,
    zoom: 1,
@@ -74,6 +75,10 @@
   }
 
   var effect = VANTA.WAVES(wavesOptions);
+
+  if (/Firefox/i.test(navigator.userAgent)) {
+   document.body.style.overflow = "hidden";
+  }
  </script>
 </body>
 

@@ -9,7 +9,6 @@ const Container = styled.div`
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-style: italic;
 
   h1 {
     width: 15rem;
@@ -33,25 +32,15 @@ const Container = styled.div`
       line-height: 3rem;
       /* margin-bottom: 1rem; */
     }
-
-    h2 {
-      font-weight: 300;
-      font-size: 1.1rem;
-    }
   }
 
   @media (min-width: 1920px) {
     /* top: 50%; */
     h1 {
       width: 25rem;
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
       /* margin-bottom: 1rem; */
-    }
-
-    h2 {
-      font-weight: 300;
-      font-size: 1.25rem;
     }
   }
 `;

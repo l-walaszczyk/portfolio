@@ -16,11 +16,11 @@ import HeaderMobile from "./components/HeaderMobile";
 import HeaderDesktop from "./components/HeaderDesktop";
 import Footer from "./components/Footer";
 import styled from "styled-components/macro";
-import config from "./config/config";
+import variables from "./styles/variables";
 
 const Main = styled.main`
   min-height: ${(props) =>
-    props.height - config.headerHeight - config.footerHeight}px;
+    props.windowHeight - variables.headerHeight - variables.footerHeight}px;
 `;
 
 function App() {
@@ -52,13 +52,13 @@ function App() {
       <LangProvider>
         <SimpleBar
           style={{
-            height: height - config.headerHeight,
+            height: height - variables.headerHeight,
             width: "100vw",
             position: "absolute",
-            top: config.headerHeight,
+            top: variables.headerHeight,
           }}
         >
-          <Main height={height}>
+          <Main windowHeight={height}>
             <Switch>
               <Route
                 path="/"

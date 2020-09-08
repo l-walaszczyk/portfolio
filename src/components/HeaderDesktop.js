@@ -1,22 +1,21 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components/macro";
 import MenuItems from "./MenuItems";
 import LangToggler from "./LangToggler";
-import config from "../config/config";
+import Logo from "./Logo";
+import variables from "../styles/variables";
 
 const Header = styled.header`
   position: fixed;
   width: 100%;
-  height: ${config.headerHeight}px;
+  height: ${variables.headerHeight}px;
 `;
 
-const H1 = styled.h1`
+const StyledLogo = styled(Logo)`
   position: absolute;
   top: 50%;
   left: 2rem;
   transform: translate(0, -50%);
-  color: white;
   font-size: 1.5rem;
   font-style: italic;
   padding: 0;
@@ -62,12 +61,7 @@ const StyledLangToggler = styled(LangToggler)`
 const HeaderDesktop = () => {
   return (
     <Header className="desktop">
-      {useLocation().pathname !== "/" && (
-        <NavLink className="logo" to="/" exact>
-          <H1>Łukasz Walaszczyk</H1>
-        </NavLink>
-      )}
-
+      <StyledLogo />
       <Nav>
         <ul>
           <StyledMenuItems />

@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import config from "../config/config";
+import variables from "../styles/variables";
 
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: ${config.footerHeight}px;
+  height: ${variables.footerHeight}px;
   text-align: center;
   & > * {
     margin: 0 0.5rem;
