@@ -49,10 +49,10 @@ function App() {
     };
   }, []);
 
+  const mainRef = React.createRef();
+
   return (
     <HashRouter basename="/">
-      <GlobalStyle />
-      <ScrollToTop />
       <LangProvider>
         <SimpleBar
           style={{
@@ -62,7 +62,9 @@ function App() {
             top: variables.headerHeight,
           }}
         >
-          <Main windowHeight={height}>
+          <GlobalStyle />
+          <Main windowHeight={height} ref={mainRef}>
+            <ScrollToTop mainRef={mainRef} />
             <Switch>
               <Route
                 path="/"
