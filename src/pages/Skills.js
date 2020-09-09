@@ -5,8 +5,8 @@ import styled from "styled-components/macro";
 
 const importAll = (r) => {
   let svgs = {};
-  r.keys().forEach((item) => {
-    svgs[item.replace("./", "")] = r(item);
+  r.keys().forEach((key) => {
+    svgs[key.replace("./", "")] = r(key);
   });
   return svgs;
 };
@@ -66,7 +66,6 @@ const SkillItemContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 1rem 0 2.25rem;
-  /* --p-lh: 1.1rem; */
 
   p {
     width: fit-content;
