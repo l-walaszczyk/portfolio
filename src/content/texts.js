@@ -87,9 +87,9 @@ const texts = {
         {
           name: "js",
           pl:
-            "Programuję w JavaScript korzystając z możliwości najwnowszych wersji standardu EcmaScript",
+            "Programuję w JavaScript korzystając z możliwości najwnowszych wersji EcmaScript",
           en:
-            "I write in JavaScript and utilize capabilities of the latest versions of the EcmaScript standard",
+            "I write in JavaScript and utilize capabilities of the latest versions of EcmaScript",
         },
       ],
     },
@@ -137,7 +137,7 @@ const texts = {
           en: "I emlpoy REST principles for designing APIs",
         },
         {
-          name: "node_express",
+          name: "node-express",
           pl: "Tworzę back-end w Node.js, korzystam z framework’a Express",
           en: "I develop back-end services in Node.js, I use Express framework",
         },
@@ -173,7 +173,7 @@ const texts = {
         },
         {
           name: "inkscape",
-          pl: "Do grafiki wektorowej używam Inkscape",
+          pl: "Do grafiki wektorowej używam edytora open-source Inkscape",
           en:
             "For vector graphics I use a free and open-source editor Inkscape",
         },

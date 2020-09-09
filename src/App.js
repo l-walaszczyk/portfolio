@@ -3,7 +3,6 @@ import { LangProvider } from "./containers/Lang";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle";
 import ScrollToTop from "./components/ScrollToTop";
-// import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
@@ -22,6 +21,10 @@ import variables from "./styles/variables";
 const Main = styled.main`
   min-height: ${(props) =>
     props.windowHeight - variables.headerHeight - variables.footerHeight}px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 function App() {
