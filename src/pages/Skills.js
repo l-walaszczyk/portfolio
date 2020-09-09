@@ -11,7 +11,7 @@ const importAll = (r) => {
   return svgs;
 };
 
-const svgs = importAll(require.context("../content/images", false, /\.(svg)$/));
+const svgs = importAll(require.context("../content/images", false, /\.svg$/));
 
 const Container = styled.div`
   display: flex;
@@ -100,7 +100,10 @@ const Skills = () => {
           count={++count}
         >
           <p>{skillItem[lang]}</p>
-          <img src={svgs[`${skillItem.name}.svg`]} alt={skillItem.name} />
+          <img
+            src={svgs[`${skillItem.name}.svg`]}
+            alt={`${skillItem.name} - logo`}
+          />
         </SkillItemContainer>
       );
     });

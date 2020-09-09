@@ -111,7 +111,7 @@ const About = () => {
       <ParagraphContainer>
         <h1>{texts.about.present.title[lang]}</h1>
         <div id="present-img-container">
-          <img src={present} alt="" />
+          <img src={present} alt={texts.about.present.imgCaption[lang]} />
         </div>
         <p>{texts.about.present.text[lang]}</p>
       </ParagraphContainer>
@@ -119,7 +119,7 @@ const About = () => {
         <h1>{texts.about.past.title[lang]}</h1>
         <p>{texts.about.past.text[lang]}</p>
         <div id="past-img-container">
-          <img src={past} alt="" />
+          <img src={past} alt={texts.about.past.imgCaption[lang]} />
           <div id="caption">
             <p>{texts.about.past.imgCaption[lang]}</p>
           </div>
@@ -129,7 +129,7 @@ const About = () => {
         <h1>{texts.about.interests.title[lang]}</h1>
         <p>{texts.about.interests.text[lang]}</p>
         <div id="interests-img-container">
-          <img src={interests} alt="" />
+          <img src={interests} alt={texts.about.interests.imgCaption[lang]} />
           <div id="caption">
             <p>{texts.about.interests.imgCaption[lang]}</p>
           </div>

@@ -45,6 +45,10 @@ const texts = {
         en:
           "I’m a self-taught web developer who gains experience and practical knowledge by creating small-scale commercial projects. Thanks to the versatility of JavaScript and new JAMstack solutions I’m able tackle front-end as well as back-end of a project. My technology stack is MERN (MongoDB, Express.js, React.js, Node.js), but I’m also learning Angular framework.",
       },
+      imgCaption: {
+        pl: "Łukasz Walaszczyk - zdjęcie profilowe",
+        en: "Łukasz Walaszczyk - profile picture",
+      },
     },
     past: {
       title: {
@@ -69,13 +73,13 @@ const texts = {
       },
       text: {
         pl:
-          "Lubię zdobywać nowe umiejętności i korzystać z nowych możliwości jakie stwarzają - dlatego zdecydowałem się związać swoją przyszłość z IT. Oprócz programowania, podobnie jest z nauką języków i poznawaniem świata - moimi hobby. Poniżej zamieszczam kilka fotografii z moich ulubionych podróży.",
+          "Lubię zdobywać nowe umiejętności i korzystać z nowych możliwości jakie stwarzają - dlatego zdecydowałem się związać swoją przyszłość z branżą IT. Oprócz programowania, podobnie jest z nauką języków i poznawaniem świata - moimi hobby. Poniżej zamieszczam kilka fotografii z moich ulubionych podróży.",
         en:
-          "I like learining new skills and benefit from the opportunities that they create - that’s why I decided to pursue a career in IT. Besides programming, it’s similar with learning foreign languages and exploring the world - my hobbies. Below I publish a few photographs from my favourite journeys.",
+          "I like learining new skills and benefit from the opportunities that they create - that’s why I decided to pursue a career in IT industry. Besides programming, it’s similar with learning foreign languages and exploring the world - my hobbies. Below I publish a few photographs from my favourite journeys.",
       },
       imgCaption: {
         pl: "Amman, Jordania, październik 2019 r.",
-        en: "Amman, Jordan, october 2019",
+        en: "Amman, Jordan, October 2019",
       },
     },
   },
@@ -89,7 +93,7 @@ const texts = {
         {
           name: "js",
           pl:
-            "Programuję w JavaScript korzystając z możliwości najwnowszych wersji EcmaScript",
+            "Programuję w JavaScript korzystając z możliwości najnowszych wersji EcmaScript",
           en:
             "I write in JavaScript and utilize capabilities of the latest versions of EcmaScript",
         },
@@ -201,7 +205,19 @@ const texts = {
       },
 
       images: ["ec-ui.jpg", "ec-api.jpg"],
-      live: "https://emiliacwojdzinska.pl",
+      imgCaptions: [
+        {
+          pl: "Zrzut ekranu strony głównej w serwisie emiliacwojdzinska.pl",
+          en: "Screenshot of the home page of emiliacwojdzinska.pl website",
+        },
+        {
+          pl:
+            "Zrzut ekranu strony umawiania wizyty w serwisie emiliacwojdzinska.pl",
+          en:
+            "Screenshot of the appointment scheduler page of emiliacwojdzinska.pl website",
+        },
+      ],
+      www: "https://emiliacwojdzinska.pl",
       git: [
         "https://github.com/l-walaszczyk/ec-ui",
         "https://github.com/l-walaszczyk/ec-api",
@@ -459,7 +475,13 @@ const texts = {
       },
 
       images: ["portfolio.jpg"],
-      live: "https://l-walaszczyk.github.io/portfolio",
+      imgCaptions: [
+        {
+          pl: "Zrzut ekranu strony startowej portfolio",
+          en: "Screenshot of the portfolio's start page",
+        },
+      ],
+      www: "https://l-walaszczyk.github.io/portfolio",
       git: ["https://github.com/l-walaszczyk/portfolio"],
       intro: {
         title: {
