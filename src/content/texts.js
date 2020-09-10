@@ -186,368 +186,362 @@ const texts = {
       ],
     },
   ],
-  projects: [
-    {
-      title: {
-        pl: (
-          <>
-            strona gabinetu psychologicznego
-            <br />z systemem rezerwacji spotkań
-          </>
-        ),
-        en: (
-          <>
-            website for a psychotherapist
-            <br />
-            with appointment scheduler
-          </>
-        ),
-      },
-
-      images: ["ec-ui.jpg", "ec-api.jpg"],
-      imgCaptions: [
-        {
-          pl: "Zrzut ekranu strony głównej w serwisie emiliacwojdzinska.pl",
-          en: "Screenshot of the home page of emiliacwojdzinska.pl website",
-        },
-        {
-          pl:
-            "Zrzut ekranu strony umawiania wizyty w serwisie emiliacwojdzinska.pl",
-          en:
-            "Screenshot of the appointment scheduler page of emiliacwojdzinska.pl website",
-        },
-      ],
-      www: "https://emiliacwojdzinska.pl",
-      git: [
-        "https://github.com/l-walaszczyk/ec-ui",
-        "https://github.com/l-walaszczyk/ec-api",
-      ],
-      intro: {
-        title: {
-          pl: "o projekcie",
-          en: "about",
-        },
-        text: {
-          pl:
-            "Projekt obejmujący front-end i back-end. Single Page Application dla gabinetu psychologicznego Emilii Cwojdzińskiej. Została stworzona, aby dostarczyć klientom Emilii informacji o jej kwalifikacjach, ofercie oraz - co najważniejsze - możliwości zapisania się przez Internet na wizytę i dokonania płatności online.",
-          en:
-            "Project that covers front-end and back-end. A Single Page Application created for a psychologist Emilia Cwojdzińska. It was designed to provide the Emilia's customers with information about her areas of expertise, services she offers and - most importantly - a way to book an apointment online and make an online payment.",
-        },
-      },
-      details: [
-        {
-          title: {
-            pl: "front-end",
-            en: "front-end",
-          },
-          text: {
-            pl: (
-              <>
-                <p>
-                  Stronę cechuje stonowana, spokojna kolorystyka. Projekt
-                  powstawał z zastosowaniem podejścia “mobile first” i
-                  responsywności. Grupa docelowa użytkowników jest zróżnicowana
-                  pod względem wieku i znajomości nowych technologii, dlatego
-                  strona została przystosowana także do Internet Explorer 11.
-                </p>
-                <p>
-                  Proces umawiania spotkania składa się z następujących kroków:
-                  <ul>
-                    <li>
-                      Wybór obszaru działalności (dorośli - dzieci - medycyna
-                      pracy)
-                    </li>
-                    <li>
-                      Wybór konkretnej usługi (w przypadku medycyny pracy także
-                      określenie liczby osób do badania)
-                    </li>
-                    <li>Wybór dnia i godziny spotkania</li>
-                    <li>
-                      Uzupełnienie formularza, wybór metody płatności (w zal. od
-                      rodzaju spotkania - niektóre spotkania przewidują
-                      wyłącznie płatność z góry, inne wyłącznie podczas wizyty)
-                      oraz akceptacja regulaminów
-                    </li>
-                    <li>
-                      /w przypadku płatności online/ przekierowanie do serwisu
-                      Przelewy24
-                    </li>
-                    <li>
-                      Wyświetlenie informacji o zapisaniu wizyty i przesłaniu
-                      potwierdzenia na adres e-mail użytkownika, albo - jeśli w
-                      serwisie Przelewy24 transakcja nie zostanie sfinalizowana
-                      - informacji o niepowodzeniu.
-                    </li>
-                  </ul>
-                </p>
-                <p>
-                  Wykorzystane biblioteki/framework’i:
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>next</li>
-                    <li>moment</li>
-                    <li>formik</li>
-                    <li>sass</li>
-                    <li>dotenv</li>
-                  </ul>
-                </p>
-              </>
-            ),
-            en: (
-              <>
-                <p>
-                  The website has a toned-down, peaceful color scheme. The
-                  project was created with the “mobile first” principle and
-                  responsiveness in mind. The user target gruop varies in terms
-                  of age and technological prowess, so the website was adapted
-                  for Internet Explorer 11.
-                </p>
-                <p>
-                  Appointment-booking process consists of the following steps:
-                  <ul>
-                    <li>
-                      Selecting the area of expertise (adults - children -
-                      occupational medicine)
-                    </li>
-                    <li>
-                      Selecting the specific service (in case of occupational
-                      medicine also specifying the number of people for
-                      examination)
-                    </li>
-                    <li>Selecting the appointment day and hour</li>
-                    <li>
-                      Filling in a form with personal data, choosing payment
-                      method (depending on the kind of appointment - some have
-                      only online payment while some other have only payment in
-                      person) and statute acceptance
-                    </li>
-                    <li>/online payments only/ Redirecting to Przelewy24</li>
-                    <li>
-                      Displaying information about saving the appointment and
-                      sending a confirmational e-mail to the user, or - in case
-                      of a failed Przelewy24 transaction - information about the
-                      failure.
-                    </li>
-                  </ul>
-                </p>
-                <p>
-                  Libraries/frameworks used:
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>next</li>
-                    <li>moment</li>
-                    <li>formik</li>
-                    <li>sass</li>
-                    <li>dotenv</li>
-                  </ul>
-                </p>
-              </>
-            ),
-          },
-        },
-        {
-          title: {
-            pl: "back-end",
-            en: "back-end",
-          },
-          text: {
-            pl: (
-              <>
-                <p>
-                  System rezerwacji ma za zadanie generować tablice z dostępnymi
-                  godzinami, zapisywać spotkania w bazie danych, a także
-                  współpracować z API serwisu Przelewy24 oraz wysyłać
-                  automatyczne powiadomienia użytkownikom. Komunikacja z
-                  systemem odbywa się poprzez RESTful API.
-                </p>
-                <p>
-                  Logika systemu rezerwacji opiera się (w uproszczeniu) na
-                  poniższych założeniach:
-                  <ul>
-                    <li>
-                      w bazie danych znajduje się 7-elementowa tablica z
-                      przedziałami czasowymi odpowiadającymi typowym godzinom
-                      przyjęć dla każdego dnia tygodnia
-                    </li>
-                    <li>
-                      dla każdej daty, dla której godzinny przyjęć będą inne niż
-                      typowe, należy utworzyć osobny dokument w bazie danych
-                    </li>
-                    <li>
-                      godziny, na które może zapisać się użytkownik, są
-                      generowane na podstawie czasu trwania spotkania oraz
-                      dostępnych przedziałów czasowych (czyli przedziały przyjęć
-                      minus przedziały zajęte przez inne spotkania)
-                    </li>
-                    <li>
-                      system jest niezależny od strefy czasowej użytkownika -
-                      daty spotkań są przesyłane między klientem a serwerem oraz
-                      zapisywane w bazie danych w czasie UTC,
-                    </li>
-                  </ul>
-                </p>
-                <p>
-                  Wykorzystane biblioteki/framework’i:
-                  <ul>
-                    <li>node</li>
-                    <li>express</li>
-                    <li>mongodb</li>
-                    <li>mongoose</li>
-                    <li>moment</li>
-                    <li>dotenv</li>
-                    <li>nodemailer</li>
-                    <li>@ingameltd/node-przelewy24</li>
-                  </ul>
-                </p>
-              </>
-            ),
-            en: (
-              <>
-                <p>
-                  The appointment scheduler is designed to generate arrays with
-                  available hours, save appointments in a database, cooperate
-                  with Przelewy24 API and send e-mail notification to the users.
-                  Communication with the scheduler is achieved by means of a
-                  RESTful API.
-                </p>
-                <p>
-                  Logic of the appointment scheduler is based on the assumptions
-                  below (simplified):
-                  <ul>
-                    <li>
-                      there is a 7-element array with time intervals
-                      corresponding with typical opening hours for each day of
-                      the week
-                    </li>
-                    <li>
-                      each date, on which the opening hours will be different
-                      than typical, should have a separate document with time
-                      intervals in the database
-                    </li>
-                    <li>
-                      hours available for the users to save appointments are
-                      generated based on appointment duration and available time
-                      intervals (i.e. the intervals of opening hours minus the
-                      intervals taken other appointments)
-                    </li>
-                    <li>
-                      the scheduler is independet of the user’s time zone -
-                      appointment dates are sent between the client and server,
-                      as well as saved to the database, on UTC.
-                    </li>
-                  </ul>
-                </p>
-                <p>
-                  Libraries/frameworks used:
-                  <ul>
-                    <li>node</li>
-                    <li>express</li>
-                    <li>mongodb</li>
-                    <li>mongoose</li>
-                    <li>moment</li>
-                    <li>dotenv</li>
-                    <li>nodemailer</li>
-                    <li>@ingameltd/node-przelewy24</li>
-                  </ul>
-                </p>
-              </>
-            ),
-          },
-        },
-      ],
+  projects: {
+    more: {
+      pl: "więcej",
+      en: "more",
     },
-    {
-      title: {
-        pl: (
-          <>
-            portfolio
-            <br />- własna strona-wizytówka
-          </>
-        ),
-        en: (
-          <>
-            portfolio
-            <br />- personal website
-          </>
-        ),
-      },
-
-      images: ["portfolio.jpg"],
-      imgCaptions: [
-        {
-          pl: "Zrzut ekranu strony startowej portfolio",
-          en: "Screenshot of the portfolio's start page",
-        },
-      ],
-      www: "https://l-walaszczyk.github.io/portfolio",
-      git: ["https://github.com/l-walaszczyk/portfolio"],
-      intro: {
+    items: [
+      {
         title: {
-          pl: "o projekcie",
-          en: "about",
+          pl: (
+            <>
+              strona gabinetu psychologicznego
+              <br />z systemem rezerwacji spotkań
+            </>
+          ),
+          en: (
+            <>
+              website for a psychotherapist
+              <br />
+              with appointment scheduler
+            </>
+          ),
         },
-        text: {
-          pl:
-            "Strona typu Single Page Application zawierająca informacje o mnie, technologiach, w jakich tworzę i projektach, które rozwijam.",
-          en:
-            "Single Page Application containing information about myself, technologies I use and projects I develop.",
-        },
-      },
-      details: [
-        {
+
+        images: ["ec-ui.jpg", "ec-api.jpg"],
+        www: [
+          "https://emiliacwojdzinska.pl",
+          "https://emiliacwojdzinska.pl/umow-spotkanie",
+        ],
+        git: [
+          "https://github.com/l-walaszczyk/ec-ui",
+          "https://github.com/l-walaszczyk/ec-api",
+        ],
+        intro: {
           title: {
-            pl: "front-end",
-            en: "front-end",
+            pl: "o projekcie",
+            en: "about",
           },
           text: {
-            pl: (
-              <>
-                <p>
-                  Minimalistyczny design, inuicyjna nawigacja i czytelna treść -
-                  tym kierowałem się podczas tworzenia strony.
-                </p>
-
-                <p>Strona jest responsywna</p>
-
-                <p>
-                  Wykorzystane biblioteki/framework’i:
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>formik</li>
-                    <li>styled-components</li>
-                  </ul>
-                </p>
-              </>
-            ),
-            en: (
-              <>
-                <p>
-                  Minimalistic design, intuitive navigation and clear content -
-                  those were the principle guiding me during website
-                  development.
-                </p>
-
-                <p>The website is responsive</p>
-
-                <p>
-                  Libraries/frameworks used:
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>formik</li>
-                    <li>styled-components</li>
-                  </ul>
-                </p>
-              </>
-            ),
+            pl:
+              "Projekt obejmujący front-end i back-end. Single Page Application dla gabinetu psychologicznego Emilii Cwojdzińskiej. Została stworzona, aby dostarczyć klientom Emilii informacji o jej kwalifikacjach, ofercie oraz - co najważniejsze - możliwości zapisania się przez Internet na wizytę i dokonania płatności online.",
+            en:
+              "Project that covers front-end and back-end. A Single Page Application created for a psychologist Emilia Cwojdzińska. It was designed to provide the Emilia's customers with information about her areas of expertise, services she offers and - most importantly - a way to book an apointment online and make an online payment.",
           },
         },
-      ],
-    },
-  ],
+        details: [
+          {
+            title: {
+              pl: "front-end",
+              en: "front-end",
+            },
+            text: {
+              pl: (
+                <>
+                  <p>
+                    Stronę cechuje stonowana, spokojna kolorystyka. Projekt
+                    powstawał z zastosowaniem podejścia “mobile first” i
+                    responsywności. Grupa docelowa użytkowników jest
+                    zróżnicowana pod względem wieku i znajomości nowych
+                    technologii, dlatego strona została przystosowana także do
+                    Internet Explorer 11.
+                  </p>
+                  <p>
+                    Proces umawiania spotkania składa się z następujących
+                    kroków:
+                    <ul>
+                      <li>
+                        Wybór obszaru działalności (dorośli - dzieci - medycyna
+                        pracy)
+                      </li>
+                      <li>
+                        Wybór konkretnej usługi (w przypadku medycyny pracy
+                        także określenie liczby osób do badania)
+                      </li>
+                      <li>Wybór dnia i godziny spotkania</li>
+                      <li>
+                        Uzupełnienie formularza, wybór metody płatności (w zal.
+                        od rodzaju spotkania - niektóre spotkania przewidują
+                        wyłącznie płatność z góry, inne wyłącznie podczas
+                        wizyty) oraz akceptacja regulaminów
+                      </li>
+                      <li>
+                        /w przypadku płatności online/ przekierowanie do serwisu
+                        Przelewy24
+                      </li>
+                      <li>
+                        Wyświetlenie informacji o zapisaniu wizyty i przesłaniu
+                        potwierdzenia na adres e-mail użytkownika, albo - jeśli
+                        w serwisie Przelewy24 transakcja nie zostanie
+                        sfinalizowana - informacji o niepowodzeniu.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Wykorzystane biblioteki/framework’i:
+                    <ul>
+                      <li>react</li>
+                      <li>react-transition-group</li>
+                      <li>next</li>
+                      <li>moment</li>
+                      <li>formik</li>
+                      <li>sass</li>
+                      <li>dotenv</li>
+                    </ul>
+                  </p>
+                </>
+              ),
+              en: (
+                <>
+                  <p>
+                    The website has a toned-down, peaceful color scheme. The
+                    project was created with the “mobile first” principle and
+                    responsiveness in mind. The user target gruop varies in
+                    terms of age and technological prowess, so the website was
+                    adapted for Internet Explorer 11.
+                  </p>
+                  <p>
+                    Appointment-booking process consists of the following steps:
+                    <ul>
+                      <li>
+                        Selecting the area of expertise (adults - children -
+                        occupational medicine)
+                      </li>
+                      <li>
+                        Selecting the specific service (in case of occupational
+                        medicine also specifying the number of people for
+                        examination)
+                      </li>
+                      <li>Selecting the appointment day and hour</li>
+                      <li>
+                        Filling in a form with personal data, choosing payment
+                        method (depending on the kind of appointment - some have
+                        only online payment while some other have only payment
+                        in person) and statute acceptance
+                      </li>
+                      <li>/online payments only/ Redirecting to Przelewy24</li>
+                      <li>
+                        Displaying information about saving the appointment and
+                        sending a confirmational e-mail to the user, or - in
+                        case of a failed Przelewy24 transaction - information
+                        about the failure.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Libraries/frameworks used:
+                    <ul>
+                      <li>react</li>
+                      <li>react-transition-group</li>
+                      <li>next</li>
+                      <li>moment</li>
+                      <li>formik</li>
+                      <li>sass</li>
+                      <li>dotenv</li>
+                    </ul>
+                  </p>
+                </>
+              ),
+            },
+          },
+          {
+            title: {
+              pl: "back-end",
+              en: "back-end",
+            },
+            text: {
+              pl: (
+                <>
+                  <p>
+                    System rezerwacji ma za zadanie generować tablice z
+                    dostępnymi godzinami, zapisywać spotkania w bazie danych, a
+                    także współpracować z API serwisu Przelewy24 oraz wysyłać
+                    automatyczne powiadomienia użytkownikom. Komunikacja z
+                    systemem odbywa się poprzez RESTful API.
+                  </p>
+                  <p>
+                    Logika systemu rezerwacji opiera się (w uproszczeniu) na
+                    poniższych założeniach:
+                    <ul>
+                      <li>
+                        w bazie danych znajduje się 7-elementowa tablica z
+                        przedziałami czasowymi odpowiadającymi typowym godzinom
+                        przyjęć dla każdego dnia tygodnia
+                      </li>
+                      <li>
+                        dla każdej daty, dla której godzinny przyjęć będą inne
+                        niż typowe, należy utworzyć osobny dokument w bazie
+                        danych
+                      </li>
+                      <li>
+                        godziny, na które może zapisać się użytkownik, są
+                        generowane na podstawie czasu trwania spotkania oraz
+                        dostępnych przedziałów czasowych (czyli przedziały
+                        przyjęć minus przedziały zajęte przez inne spotkania)
+                      </li>
+                      <li>
+                        system jest niezależny od strefy czasowej użytkownika -
+                        daty spotkań są przesyłane między klientem a serwerem
+                        oraz zapisywane w bazie danych w czasie UTC,
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Wykorzystane biblioteki/framework’i:
+                    <ul>
+                      <li>node</li>
+                      <li>express</li>
+                      <li>mongodb</li>
+                      <li>mongoose</li>
+                      <li>moment</li>
+                      <li>dotenv</li>
+                      <li>nodemailer</li>
+                      <li>@ingameltd/node-przelewy24</li>
+                    </ul>
+                  </p>
+                </>
+              ),
+              en: (
+                <>
+                  <p>
+                    The appointment scheduler is designed to generate arrays
+                    with available hours, save appointments in a database,
+                    cooperate with Przelewy24 API and send e-mail notification
+                    to the users. Communication with the scheduler is achieved
+                    by means of a RESTful API.
+                  </p>
+                  <p>
+                    Logic of the appointment scheduler is based on the
+                    assumptions below (simplified):
+                    <ul>
+                      <li>
+                        there is a 7-element array with time intervals
+                        corresponding with typical opening hours for each day of
+                        the week
+                      </li>
+                      <li>
+                        each date, on which the opening hours will be different
+                        than typical, should have a separate document with time
+                        intervals in the database
+                      </li>
+                      <li>
+                        hours available for the users to save appointments are
+                        generated based on appointment duration and available
+                        time intervals (i.e. the intervals of opening hours
+                        minus the intervals taken other appointments)
+                      </li>
+                      <li>
+                        the scheduler is independet of the user’s time zone -
+                        appointment dates are sent between the client and
+                        server, as well as saved to the database, on UTC.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Libraries/frameworks used:
+                    <ul>
+                      <li>node</li>
+                      <li>express</li>
+                      <li>mongodb</li>
+                      <li>mongoose</li>
+                      <li>moment</li>
+                      <li>dotenv</li>
+                      <li>nodemailer</li>
+                      <li>@ingameltd/node-przelewy24</li>
+                    </ul>
+                  </p>
+                </>
+              ),
+            },
+          },
+        ],
+      },
+      {
+        title: {
+          pl: (
+            <>
+              portfolio
+              <br />- własna strona-wizytówka
+            </>
+          ),
+          en: (
+            <>
+              portfolio
+              <br />- personal website
+            </>
+          ),
+        },
+
+        images: ["portfolio.jpg"],
+        www: ["https://l-walaszczyk.github.io/portfolio"],
+        git: ["https://github.com/l-walaszczyk/portfolio"],
+        intro: {
+          title: {
+            pl: "o projekcie",
+            en: "about",
+          },
+          text: {
+            pl:
+              "Strona typu Single Page Application zawierająca informacje o mnie, technologiach, w jakich tworzę i projektach, które rozwijam.",
+            en:
+              "Single Page Application containing information about myself, technologies I use and projects I develop.",
+          },
+        },
+        details: [
+          {
+            title: {
+              pl: "front-end",
+              en: "front-end",
+            },
+            text: {
+              pl: (
+                <>
+                  <p>
+                    Minimalistyczny design, inuicyjna nawigacja i czytelna treść
+                    - tym kierowałem się podczas tworzenia strony.
+                  </p>
+
+                  <p>Strona jest responsywna</p>
+
+                  <p>
+                    Wykorzystane biblioteki/framework’i:
+                    <ul>
+                      <li>react</li>
+                      <li>react-transition-group</li>
+                      <li>formik</li>
+                      <li>styled-components</li>
+                    </ul>
+                  </p>
+                </>
+              ),
+              en: (
+                <>
+                  <p>
+                    Minimalistic design, intuitive navigation and clear content
+                    - those were the principle guiding me during website
+                    development.
+                  </p>
+
+                  <p>The website is responsive</p>
+
+                  <p>
+                    Libraries/frameworks used:
+                    <ul>
+                      <li>react</li>
+                      <li>react-transition-group</li>
+                      <li>formik</li>
+                      <li>styled-components</li>
+                    </ul>
+                  </p>
+                </>
+              ),
+            },
+          },
+        ],
+      },
+    ],
+  },
   error404: {
     title1: {
       pl: "Error404",

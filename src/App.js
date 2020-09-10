@@ -66,16 +66,8 @@ function App() {
           <Main windowHeight={height} ref={mainRef}>
             <ScrollToTop mainRef={mainRef} />
             <Switch>
-              <Route
-                path="/"
-                exact
-                render={(props) => <Home {...props} height={height} />}
-              />
-              <Route
-                path="/about"
-                exact
-                render={(props) => <About {...props} height={height} />}
-              />
+              <Route path="/" exact component={Home} />
+              <Route path="/about" exact component={About} />
               <Route path="/skills" exact component={Skills} />
               <Route path="/projects" exact component={Projects} />
               <Route path="/contact" exact component={Contact} />
