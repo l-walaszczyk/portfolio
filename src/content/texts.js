@@ -195,6 +195,15 @@ const texts = {
       pl: "zwiń",
       en: "less",
     },
+    links: {
+      pl: "linki",
+      en: "links",
+    },
+
+    libsFworks: {
+      pl: "Wykorzystane biblioteki/framework’i:",
+      en: "Libraries/frameworks used:",
+    },
     items: [
       {
         title: {
@@ -212,27 +221,34 @@ const texts = {
             </>
           ),
         },
-
         images: ["ec-ui.jpg", "ec-api.jpg"],
         www: [
           "https://emiliacwojdzinska.pl",
           "https://emiliacwojdzinska.pl/umow-spotkanie",
         ],
+        wwwDescriptions: [
+          {
+            pl: "strona startowa",
+            en: "home page",
+          },
+          {
+            pl: "strona umawiania spotkania",
+            en: "page for appointment booking",
+          },
+        ],
         git: [
           "https://github.com/l-walaszczyk/ec-ui",
           "https://github.com/l-walaszczyk/ec-api",
         ],
+        gitDescriptions: [
+          { pl: "kod front-end", en: "front-end code" },
+          { pl: "kod back-end", en: "back-end code" },
+        ],
         intro: {
-          title: {
-            pl: "o projekcie",
-            en: "about",
-          },
-          text: {
-            pl:
-              "Projekt obejmujący front-end i back-end. Został stworzony, aby dostarczyć klientom Emilii informacji o jej kwalifikacjach, ofercie oraz - co najważniejsze - możliwości zapisania się przez Internet na wizytę i dokonania płatności online.",
-            en:
-              "Project that covers front-end and back-end. It was designed to provide the Emilia's customers with information about her areas of expertise, services she offers and - most importantly - a way to book an apointment online and make an online payment.",
-          },
+          pl:
+            "Projekt obejmujący front-end i back-end. Został stworzony, aby dostarczyć klientom gabinetu informacje o ofercie oraz - co najważniejsze - umożliwić zapisanie się przez Internet na wizytę i dokonanie płatności online.",
+          en:
+            "Project that covers front-end and back-end. It was designed to provide the psychotherapist's customers with information about her services and - most importantly - make it possible to book an apointment online and make an online payment.",
         },
         details: [
           {
@@ -240,6 +256,15 @@ const texts = {
               pl: "front-end",
               en: "front-end",
             },
+            libsFworks: [
+              "react",
+              "react-transition-group",
+              "next",
+              "moment",
+              "formik",
+              "sass",
+              "dotenv",
+            ],
             text: {
               pl: (
                 <>
@@ -282,17 +307,6 @@ const texts = {
                       - informacji o niepowodzeniu.
                     </li>
                   </ul>
-
-                  <p>Wykorzystane biblioteki/framework’i:</p>
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>next</li>
-                    <li>moment</li>
-                    <li>formik</li>
-                    <li>sass</li>
-                    <li>dotenv</li>
-                  </ul>
                 </>
               ),
               en: (
@@ -332,17 +346,6 @@ const texts = {
                       failure.
                     </li>
                   </ul>
-
-                  <p>Libraries/frameworks used:</p>
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>next</li>
-                    <li>moment</li>
-                    <li>formik</li>
-                    <li>sass</li>
-                    <li>dotenv</li>
-                  </ul>
                 </>
               ),
             },
@@ -352,6 +355,16 @@ const texts = {
               pl: "back-end",
               en: "back-end",
             },
+            libsFworks: [
+              "node",
+              "express",
+              "mongodb",
+              "mongoose",
+              "moment",
+              "dotenv",
+              "nodemailer",
+              "@ingameltd/node-przelewy24",
+            ],
             text: {
               pl: (
                 <>
@@ -387,18 +400,6 @@ const texts = {
                       daty spotkań są przesyłane między klientem a serwerem oraz
                       zapisywane w bazie danych w czasie UTC,
                     </li>
-                  </ul>
-
-                  <p>Wykorzystane biblioteki/framework’i:</p>
-                  <ul>
-                    <li>node</li>
-                    <li>express</li>
-                    <li>mongodb</li>
-                    <li>mongoose</li>
-                    <li>moment</li>
-                    <li>dotenv</li>
-                    <li>nodemailer</li>
-                    <li>@ingameltd/node-przelewy24</li>
                   </ul>
                 </>
               ),
@@ -438,18 +439,6 @@ const texts = {
                       as well as saved to the database, on UTC.
                     </li>
                   </ul>
-
-                  <p>Libraries/frameworks used:</p>
-                  <ul>
-                    <li>node</li>
-                    <li>express</li>
-                    <li>mongodb</li>
-                    <li>mongoose</li>
-                    <li>moment</li>
-                    <li>dotenv</li>
-                    <li>nodemailer</li>
-                    <li>@ingameltd/node-przelewy24</li>
-                  </ul>
                 </>
               ),
             },
@@ -474,18 +463,16 @@ const texts = {
 
         images: ["portfolio.jpg"],
         www: ["https://l-walaszczyk.github.io/portfolio"],
+        wwwDescriptions: [
+          { pl: "strona startowa portfolio", en: "portfolio's home page" },
+        ],
         git: ["https://github.com/l-walaszczyk/portfolio"],
+        gitDescriptions: [{ pl: "kod", en: "code" }],
         intro: {
-          title: {
-            pl: "o projekcie",
-            en: "about",
-          },
-          text: {
-            pl:
-              "Strona typu Single Page Application zawierająca informacje o mnie, technologiach, w jakich tworzę i projektach, które rozwijam.",
-            en:
-              "Single Page Application containing information about myself, technologies I use and projects I develop.",
-          },
+          pl:
+            "Strona typu Single Page Application zawierająca informacje o mnie, technologiach, w jakich tworzę i projektach, które rozwijam.",
+          en:
+            "Single Page Application containing information about myself, technologies I use and projects I develop.",
         },
         details: [
           {
@@ -493,6 +480,12 @@ const texts = {
               pl: "front-end",
               en: "front-end",
             },
+            libsFworks: [
+              "react",
+              "react-transition-group",
+              "formik",
+              "styled-components",
+            ],
             text: {
               pl: (
                 <>
@@ -502,14 +495,6 @@ const texts = {
                   </p>
 
                   <p>Strona jest responsywna</p>
-
-                  <p>Wykorzystane biblioteki/framework’i:</p>
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>formik</li>
-                    <li>styled-components</li>
-                  </ul>
                 </>
               ),
               en: (
@@ -521,14 +506,6 @@ const texts = {
                   </p>
 
                   <p>The website is responsive</p>
-
-                  <p>Libraries/frameworks used:</p>
-                  <ul>
-                    <li>react</li>
-                    <li>react-transition-group</li>
-                    <li>formik</li>
-                    <li>styled-components</li>
-                  </ul>
                 </>
               ),
             },

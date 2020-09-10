@@ -5,7 +5,7 @@ import styled from "styled-components/macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import ProjectDetailsContainer from "../components/ProjectDetailsContainer";
+import ProjectMoreContainer from "../components/ProjectMoreContainer";
 
 const importAll = (r) => {
   let images = {};
@@ -122,13 +122,47 @@ const ImageWrapper = styled.button`
   }
 `;
 
-const DetailsContainer = styled(ProjectDetailsContainer)`
-  div.details-wrapper {
+const MoreContainer = styled(ProjectMoreContainer)`
+  div.links-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     h2 {
-      font-size: 1rem;
-      margin: 1rem 0 0;
+      width: 100%;
+      flex-shrink: 0;
     }
 
+    div {
+      width: 49%;
+      width: 13rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: fit-content;
+        svg {
+          font-size: 1.2rem;
+        }
+        p {
+          margin: 0.4rem;
+          font-size: 0.8rem;
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin: 1rem 0 0;
+  }
+
+  div.details-container {
     p {
       margin: 0.75rem 0 0.2rem;
     }
@@ -172,42 +206,68 @@ const Projects = ({ simpleBarRef }) => {
   }, []);
 
   const projects = texts.projects.items.map((project, i) => {
-    const imgs = project.images.map((image, j) => {
+    const imgs = project.images.map((image, i) => {
       return (
-        <ImageWrapper key={j} className={flashImageWrapper && "flash"}>
+        <ImageWrapper key={i} className={flashImageWrapper && "flash"}>
           <img
-            key={j}
+            key={i}
             src={images[image]}
-            alt={project.www[j].replace("https://", "")}
+            alt={project.www[i].replace("https://", "")}
           />
           <div className="url-wrapper">
-            <a target="_blank" rel="noopener noreferrer" href={project.www[j]}>
+            <a target="_blank" rel="noopener noreferrer" href={project.www[i]}>
               <FontAwesomeIcon icon={faGlobe} />
             </a>
-            <p>{project.www[j].replace("https://", "")}</p>
+            <p>{project.www[i].replace("https://", "")}</p>
           </div>
         </ImageWrapper>
 
-        //{project.git[j] && (
+        //{project.git[i] && (
         //  <div className="url-item">
         //    <a
         //      target="_blank"
         //      rel="noopener noreferrer"
-        //      href={project.git[j]}
+        //      href={project.git[i]}
         //    >
         //      <FontAwesomeIcon icon={faGithub} />
-        //      <p>{project.details[j].title[lang]}</p>
+        //      <p>{project.details[i].title[lang]}</p>
         //    </a>
         //  </div>
         //)}
       );
     });
 
-    const details = project.details.map((detail, j) => {
+    const www = project.www.map((www, i) => {
       return (
-        <div key={j} className="text-container">
+        <a key={i} target="_blank" rel="noopener noreferrer" href={www}>
+          <FontAwesomeIcon icon={faGlobe} />
+          <p>{project.wwwDescriptions[i][lang]}</p>
+        </a>
+      );
+    });
+
+    const git = project.git.map((git, i) => {
+      return (
+        <a key={i} target="_blank" rel="noopener noreferrer" href={git}>
+          <FontAwesomeIcon icon={faGithub} />
+          <p>{project.gitDescriptions[i][lang]}</p>
+        </a>
+      );
+    });
+
+    const details = project.details.map((detail, i) => {
+      const libsFworks = detail.libsFworks.map((item, i) => {
+        return <li key={i}>{item}</li>;
+      });
+
+      return (
+        <div key={i} className="text-container">
           <h2>{detail.title[lang]}</h2>
           <div className="text-wrapper">{detail.text[lang]}</div>
+          <div key={i} className="libs-fworks-wrapper">
+            <p>{texts.projects.libsFworks[lang]}</p>
+            <ul>{libsFworks}</ul>
+          </div>
         </div>
       );
     });
@@ -217,18 +277,21 @@ const Projects = ({ simpleBarRef }) => {
         <H1>{project.title[lang]}</H1>
         <IntroContainer>
           <ImageGroupContainer>{imgs}</ImageGroupContainer>
-          <P>{project.intro.text[lang]}</P>
+          <P>{project.intro[lang]}</P>
         </IntroContainer>
-        <DetailsContainer details={details} simpleBarRef={simpleBarRef} />
+        <MoreContainer simpleBarRef={simpleBarRef}>
+          <div className="links-container">
+            <h2>{texts.projects.links[lang]}</h2>
+            <div className="www-container">{www}</div>
+            <div className="git-container">{git}</div>
+          </div>
+          <div className="details-container">{details}</div>
+        </MoreContainer>
       </ProjectContainer>
     );
   });
 
-  return (
-    <section className="projects" onScroll={() => console.log("scroll")}>
-      {projects}
-    </section>
-  );
+  return <section className="projects">{projects}</section>;
 };
 
 export default Projects;

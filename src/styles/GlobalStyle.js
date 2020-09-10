@@ -35,11 +35,14 @@ body {
 @media (min-width: 768px) and (min-height: 768px) {
  :root {
   font-size: 22px;
- } */
-}
+ } 
+}*/
 
 h1, h2, h3 {
  font-weight: 300;
+ &::first-letter {
+   text-transform: uppercase;
+ }
 }
 
 a, button {
