@@ -5,7 +5,7 @@ import styled from "styled-components/macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import ProjectDetailsContainer from "../components/ProjectDetailsContainer";
 
 const importAll = (r) => {
   let images = {};
@@ -22,8 +22,12 @@ const ProjectContainer = styled.div`
   padding: 1rem 4vw;
   background-color: rgba(0, 0, 0, 0.3);
 
+  @media (min-width: 640px) {
+    padding: 1rem calc((100vw - 30rem) / 2);
+  }
+
   @media (min-width: 1280px) {
-    padding: 1rem 0;
+    padding: 1rem calc((100vw - 55rem) / 2);
   }
 `;
 
@@ -31,8 +35,8 @@ const H1 = styled.h1`
   padding: 0.5rem 0;
   font-size: 1rem;
   line-height: 1.1rem;
-  max-width: 55rem;
   margin: auto;
+  /* max-width: 55rem; */
 `;
 
 const IntroContainer = styled.div`
@@ -41,12 +45,12 @@ const IntroContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 90vw;
+  width: 100%;
   margin: auto;
 
-  @media (min-width: 1280px) {
+  /* @media (min-width: 1280px) {
     width: 55rem;
-  }
+  } */
 `;
 
 const P = styled.p`
@@ -118,26 +122,45 @@ const ImageWrapper = styled.button`
   }
 `;
 
-const ButtonMore = styled.button`
-  align-self: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  font-size: 1rem;
-  margin: auto;
+const DetailsContainer = styled(ProjectDetailsContainer)`
+  div.details-wrapper {
+    h2 {
+      font-size: 1rem;
+      margin: 1rem 0 0;
+    }
 
-  p,
-  svg {
-    padding: 0.25rem;
+    p {
+      margin: 0.75rem 0 0.2rem;
+    }
+
+    p,
+    li {
+      font-size: 0.8rem;
+    }
+    ul {
+      margin: 0.2rem 0 0.5rem;
+      li {
+        position: relative;
+        line-height: 1rem;
+        margin: 0.2rem 0 0.2rem 0.5rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          position: absolute;
+          left: -0.5rem;
+          content: "-";
+        }
+      }
+    }
   }
 `;
 
-const Projects = () => {
+const Projects = ({ simpleBarRef }) => {
   const [lang] = useContext(LangContext);
   const [flashImageWrapper, setFlashImageWrapper] = useState(false);
-  // const [showURLsGroup, setShowURLsGroup] = useState("");
-  // const [showURLsAll, setShowURLsAll] = useState(false);
 
   useEffect(() => {
     let timeout1 = setTimeout(() => setFlashImageWrapper(true), 1000);
@@ -180,6 +203,15 @@ const Projects = () => {
       );
     });
 
+    const details = project.details.map((detail, j) => {
+      return (
+        <div key={j} className="text-container">
+          <h2>{detail.title[lang]}</h2>
+          <div className="text-wrapper">{detail.text[lang]}</div>
+        </div>
+      );
+    });
+
     return (
       <ProjectContainer id={i} key={i}>
         <H1>{project.title[lang]}</H1>
@@ -187,10 +219,7 @@ const Projects = () => {
           <ImageGroupContainer>{imgs}</ImageGroupContainer>
           <P>{project.intro.text[lang]}</P>
         </IntroContainer>
-        <ButtonMore>
-          <p>{texts.projects.more[lang]}</p>
-          <FontAwesomeIcon icon={faPlusCircle} />
-        </ButtonMore>
+        <DetailsContainer details={details} simpleBarRef={simpleBarRef} />
       </ProjectContainer>
     );
   });

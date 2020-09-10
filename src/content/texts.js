@@ -73,7 +73,7 @@ const texts = {
       },
       text: {
         pl:
-          "Lubię zdobywać nowe umiejętności i korzystać z nowych możliwości jakie stwarzają - dlatego zdecydowałem się związać swoją przyszłość z branżą IT. Oprócz programowania, podobnie jest z nauką języków i poznawaniem świata - moimi hobby. Poniżej zamieszczam kilka fotografii z moich ulubionych podróży.",
+          "Lubię zdobywać nowe umiejętności i korzystać z nowych możliwości, jakie one stwarzają - dlatego zdecydowałem się związać swoją przyszłość z branżą IT. Oprócz programowania, podobnie jest z nauką języków i poznawaniem świata - moimi hobby. Poniżej zamieszczam kilka fotografii z moich ulubionych podróży.",
         en:
           "I like learining new skills and benefit from the opportunities that they create - that’s why I decided to pursue a career in IT industry. Besides programming, it’s similar with learning foreign languages and exploring the world - my hobbies. Below I publish a few photographs from my favourite journeys.",
       },
@@ -188,8 +188,12 @@ const texts = {
   ],
   projects: {
     more: {
-      pl: "więcej",
+      pl: "rozwiń",
       en: "more",
+    },
+    less: {
+      pl: "zwiń",
+      en: "less",
     },
     items: [
       {
@@ -225,9 +229,9 @@ const texts = {
           },
           text: {
             pl:
-              "Projekt obejmujący front-end i back-end. Single Page Application dla gabinetu psychologicznego Emilii Cwojdzińskiej. Została stworzona, aby dostarczyć klientom Emilii informacji o jej kwalifikacjach, ofercie oraz - co najważniejsze - możliwości zapisania się przez Internet na wizytę i dokonania płatności online.",
+              "Projekt obejmujący front-end i back-end. Został stworzony, aby dostarczyć klientom Emilii informacji o jej kwalifikacjach, ofercie oraz - co najważniejsze - możliwości zapisania się przez Internet na wizytę i dokonania płatności online.",
             en:
-              "Project that covers front-end and back-end. A Single Page Application created for a psychologist Emilia Cwojdzińska. It was designed to provide the Emilia's customers with information about her areas of expertise, services she offers and - most importantly - a way to book an apointment online and make an online payment.",
+              "Project that covers front-end and back-end. It was designed to provide the Emilia's customers with information about her areas of expertise, services she offers and - most importantly - a way to book an apointment online and make an online payment.",
           },
         },
         details: [
@@ -250,46 +254,45 @@ const texts = {
                   <p>
                     Proces umawiania spotkania składa się z następujących
                     kroków:
-                    <ul>
-                      <li>
-                        Wybór obszaru działalności (dorośli - dzieci - medycyna
-                        pracy)
-                      </li>
-                      <li>
-                        Wybór konkretnej usługi (w przypadku medycyny pracy
-                        także określenie liczby osób do badania)
-                      </li>
-                      <li>Wybór dnia i godziny spotkania</li>
-                      <li>
-                        Uzupełnienie formularza, wybór metody płatności (w zal.
-                        od rodzaju spotkania - niektóre spotkania przewidują
-                        wyłącznie płatność z góry, inne wyłącznie podczas
-                        wizyty) oraz akceptacja regulaminów
-                      </li>
-                      <li>
-                        /w przypadku płatności online/ przekierowanie do serwisu
-                        Przelewy24
-                      </li>
-                      <li>
-                        Wyświetlenie informacji o zapisaniu wizyty i przesłaniu
-                        potwierdzenia na adres e-mail użytkownika, albo - jeśli
-                        w serwisie Przelewy24 transakcja nie zostanie
-                        sfinalizowana - informacji o niepowodzeniu.
-                      </li>
-                    </ul>
                   </p>
-                  <p>
-                    Wykorzystane biblioteki/framework’i:
-                    <ul>
-                      <li>react</li>
-                      <li>react-transition-group</li>
-                      <li>next</li>
-                      <li>moment</li>
-                      <li>formik</li>
-                      <li>sass</li>
-                      <li>dotenv</li>
-                    </ul>
-                  </p>
+                  <ul>
+                    <li>
+                      Wybór obszaru działalności (dorośli - dzieci - medycyna
+                      pracy)
+                    </li>
+                    <li>
+                      Wybór konkretnej usługi (w przypadku medycyny pracy także
+                      określenie liczby osób do badania)
+                    </li>
+                    <li>Wybór dnia i godziny spotkania</li>
+                    <li>
+                      Uzupełnienie formularza, wybór metody płatności (w zal. od
+                      rodzaju spotkania - niektóre spotkania przewidują
+                      wyłącznie płatność z góry, inne wyłącznie podczas wizyty)
+                      oraz akceptacja regulaminów
+                    </li>
+                    <li>
+                      /w przypadku płatności online/ przekierowanie do serwisu
+                      Przelewy24
+                    </li>
+                    <li>
+                      Wyświetlenie informacji o zapisaniu wizyty i przesłaniu
+                      potwierdzenia na adres e-mail użytkownika, albo - jeśli w
+                      serwisie Przelewy24 transakcja nie zostanie sfinalizowana
+                      - informacji o niepowodzeniu.
+                    </li>
+                  </ul>
+
+                  <p>Wykorzystane biblioteki/framework’i:</p>
+                  <ul>
+                    <li>react</li>
+                    <li>react-transition-group</li>
+                    <li>next</li>
+                    <li>moment</li>
+                    <li>formik</li>
+                    <li>sass</li>
+                    <li>dotenv</li>
+                  </ul>
                 </>
               ),
               en: (
@@ -303,44 +306,43 @@ const texts = {
                   </p>
                   <p>
                     Appointment-booking process consists of the following steps:
-                    <ul>
-                      <li>
-                        Selecting the area of expertise (adults - children -
-                        occupational medicine)
-                      </li>
-                      <li>
-                        Selecting the specific service (in case of occupational
-                        medicine also specifying the number of people for
-                        examination)
-                      </li>
-                      <li>Selecting the appointment day and hour</li>
-                      <li>
-                        Filling in a form with personal data, choosing payment
-                        method (depending on the kind of appointment - some have
-                        only online payment while some other have only payment
-                        in person) and statute acceptance
-                      </li>
-                      <li>/online payments only/ Redirecting to Przelewy24</li>
-                      <li>
-                        Displaying information about saving the appointment and
-                        sending a confirmational e-mail to the user, or - in
-                        case of a failed Przelewy24 transaction - information
-                        about the failure.
-                      </li>
-                    </ul>
                   </p>
-                  <p>
-                    Libraries/frameworks used:
-                    <ul>
-                      <li>react</li>
-                      <li>react-transition-group</li>
-                      <li>next</li>
-                      <li>moment</li>
-                      <li>formik</li>
-                      <li>sass</li>
-                      <li>dotenv</li>
-                    </ul>
-                  </p>
+                  <ul>
+                    <li>
+                      Selecting the area of expertise (adults - children -
+                      occupational medicine)
+                    </li>
+                    <li>
+                      Selecting the specific service (in case of occupational
+                      medicine also specifying the number of people for
+                      examination)
+                    </li>
+                    <li>Selecting the appointment day and hour</li>
+                    <li>
+                      Filling in a form with personal data, choosing payment
+                      method (depending on the kind of appointment - some have
+                      only online payment while some other have only payment in
+                      person) and statute acceptance
+                    </li>
+                    <li>/online payments only/ Redirecting to Przelewy24</li>
+                    <li>
+                      Displaying information about saving the appointment and
+                      sending a confirmational e-mail to the user, or - in case
+                      of a failed Przelewy24 transaction - information about the
+                      failure.
+                    </li>
+                  </ul>
+
+                  <p>Libraries/frameworks used:</p>
+                  <ul>
+                    <li>react</li>
+                    <li>react-transition-group</li>
+                    <li>next</li>
+                    <li>moment</li>
+                    <li>formik</li>
+                    <li>sass</li>
+                    <li>dotenv</li>
+                  </ul>
                 </>
               ),
             },
@@ -363,43 +365,41 @@ const texts = {
                   <p>
                     Logika systemu rezerwacji opiera się (w uproszczeniu) na
                     poniższych założeniach:
-                    <ul>
-                      <li>
-                        w bazie danych znajduje się 7-elementowa tablica z
-                        przedziałami czasowymi odpowiadającymi typowym godzinom
-                        przyjęć dla każdego dnia tygodnia
-                      </li>
-                      <li>
-                        dla każdej daty, dla której godzinny przyjęć będą inne
-                        niż typowe, należy utworzyć osobny dokument w bazie
-                        danych
-                      </li>
-                      <li>
-                        godziny, na które może zapisać się użytkownik, są
-                        generowane na podstawie czasu trwania spotkania oraz
-                        dostępnych przedziałów czasowych (czyli przedziały
-                        przyjęć minus przedziały zajęte przez inne spotkania)
-                      </li>
-                      <li>
-                        system jest niezależny od strefy czasowej użytkownika -
-                        daty spotkań są przesyłane między klientem a serwerem
-                        oraz zapisywane w bazie danych w czasie UTC,
-                      </li>
-                    </ul>
                   </p>
-                  <p>
-                    Wykorzystane biblioteki/framework’i:
-                    <ul>
-                      <li>node</li>
-                      <li>express</li>
-                      <li>mongodb</li>
-                      <li>mongoose</li>
-                      <li>moment</li>
-                      <li>dotenv</li>
-                      <li>nodemailer</li>
-                      <li>@ingameltd/node-przelewy24</li>
-                    </ul>
-                  </p>
+                  <ul>
+                    <li>
+                      w bazie danych znajduje się 7-elementowa tablica z
+                      przedziałami czasowymi odpowiadającymi typowym godzinom
+                      przyjęć dla każdego dnia tygodnia
+                    </li>
+                    <li>
+                      dla każdej daty, dla której godzinny przyjęć będą inne niż
+                      typowe, należy utworzyć osobny dokument w bazie danych
+                    </li>
+                    <li>
+                      godziny, na które może zapisać się użytkownik, są
+                      generowane na podstawie czasu trwania spotkania oraz
+                      dostępnych przedziałów czasowych (czyli przedziały przyjęć
+                      minus przedziały zajęte przez inne spotkania)
+                    </li>
+                    <li>
+                      system jest niezależny od strefy czasowej użytkownika -
+                      daty spotkań są przesyłane między klientem a serwerem oraz
+                      zapisywane w bazie danych w czasie UTC,
+                    </li>
+                  </ul>
+
+                  <p>Wykorzystane biblioteki/framework’i:</p>
+                  <ul>
+                    <li>node</li>
+                    <li>express</li>
+                    <li>mongodb</li>
+                    <li>mongoose</li>
+                    <li>moment</li>
+                    <li>dotenv</li>
+                    <li>nodemailer</li>
+                    <li>@ingameltd/node-przelewy24</li>
+                  </ul>
                 </>
               ),
               en: (
@@ -414,43 +414,42 @@ const texts = {
                   <p>
                     Logic of the appointment scheduler is based on the
                     assumptions below (simplified):
-                    <ul>
-                      <li>
-                        there is a 7-element array with time intervals
-                        corresponding with typical opening hours for each day of
-                        the week
-                      </li>
-                      <li>
-                        each date, on which the opening hours will be different
-                        than typical, should have a separate document with time
-                        intervals in the database
-                      </li>
-                      <li>
-                        hours available for the users to save appointments are
-                        generated based on appointment duration and available
-                        time intervals (i.e. the intervals of opening hours
-                        minus the intervals taken other appointments)
-                      </li>
-                      <li>
-                        the scheduler is independet of the user’s time zone -
-                        appointment dates are sent between the client and
-                        server, as well as saved to the database, on UTC.
-                      </li>
-                    </ul>
                   </p>
-                  <p>
-                    Libraries/frameworks used:
-                    <ul>
-                      <li>node</li>
-                      <li>express</li>
-                      <li>mongodb</li>
-                      <li>mongoose</li>
-                      <li>moment</li>
-                      <li>dotenv</li>
-                      <li>nodemailer</li>
-                      <li>@ingameltd/node-przelewy24</li>
-                    </ul>
-                  </p>
+                  <ul>
+                    <li>
+                      there is a 7-element array with time intervals
+                      corresponding with typical opening hours for each day of
+                      the week
+                    </li>
+                    <li>
+                      each date, on which the opening hours will be different
+                      than typical, should have a separate document with time
+                      intervals in the database
+                    </li>
+                    <li>
+                      hours available for the users to save appointments are
+                      generated based on appointment duration and available time
+                      intervals (i.e. the intervals of opening hours minus the
+                      intervals taken other appointments)
+                    </li>
+                    <li>
+                      the scheduler is independet of the user’s time zone -
+                      appointment dates are sent between the client and server,
+                      as well as saved to the database, on UTC.
+                    </li>
+                  </ul>
+
+                  <p>Libraries/frameworks used:</p>
+                  <ul>
+                    <li>node</li>
+                    <li>express</li>
+                    <li>mongodb</li>
+                    <li>mongoose</li>
+                    <li>moment</li>
+                    <li>dotenv</li>
+                    <li>nodemailer</li>
+                    <li>@ingameltd/node-przelewy24</li>
+                  </ul>
                 </>
               ),
             },
@@ -504,15 +503,13 @@ const texts = {
 
                   <p>Strona jest responsywna</p>
 
-                  <p>
-                    Wykorzystane biblioteki/framework’i:
-                    <ul>
-                      <li>react</li>
-                      <li>react-transition-group</li>
-                      <li>formik</li>
-                      <li>styled-components</li>
-                    </ul>
-                  </p>
+                  <p>Wykorzystane biblioteki/framework’i:</p>
+                  <ul>
+                    <li>react</li>
+                    <li>react-transition-group</li>
+                    <li>formik</li>
+                    <li>styled-components</li>
+                  </ul>
                 </>
               ),
               en: (
@@ -525,15 +522,13 @@ const texts = {
 
                   <p>The website is responsive</p>
 
-                  <p>
-                    Libraries/frameworks used:
-                    <ul>
-                      <li>react</li>
-                      <li>react-transition-group</li>
-                      <li>formik</li>
-                      <li>styled-components</li>
-                    </ul>
-                  </p>
+                  <p>Libraries/frameworks used:</p>
+                  <ul>
+                    <li>react</li>
+                    <li>react-transition-group</li>
+                    <li>formik</li>
+                    <li>styled-components</li>
+                  </ul>
                 </>
               ),
             },

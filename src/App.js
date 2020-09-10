@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import { LangProvider } from "./containers/Lang";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle";
@@ -27,7 +27,7 @@ const Main = styled.main`
   justify-content: center;
 `;
 
-function App() {
+const App = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
 
@@ -49,12 +49,14 @@ function App() {
     };
   }, []);
 
-  const mainRef = React.createRef();
+  const mainRef = createRef();
+  const simpleBarRef = createRef();
 
   return (
     <HashRouter basename="/">
       <LangProvider>
         <SimpleBar
+          ref={simpleBarRef}
           style={{
             height: height - variables.headerHeight,
             width: "100vw",
@@ -69,7 +71,13 @@ function App() {
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={About} />
               <Route path="/skills" exact component={Skills} />
-              <Route path="/projects" exact component={Projects} />
+              <Route
+                path="/projects"
+                exact
+                render={(props) => (
+                  <Projects {...props} simpleBarRef={simpleBarRef} />
+                )}
+              />
               <Route path="/contact" exact component={Contact} />
               <Route component={Error404} />
             </Switch>
@@ -86,6 +94,6 @@ function App() {
       </LangProvider>
     </HashRouter>
   );
-}
+};
 
 export default App;
