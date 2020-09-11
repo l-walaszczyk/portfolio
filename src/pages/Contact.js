@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import ContactForm from "../components/ContactFormExample";
+import ContactForm from "../components/ContactForm";
 
 const LinksContainer = styled.div`
   display: flex;
@@ -43,6 +45,8 @@ const LinksContainer = styled.div`
   }
 `;
 
+const FormContainer = styled.div``;
+
 const Contact = () => {
   const [lang] = useContext(LangContext);
 
@@ -74,6 +78,25 @@ const Contact = () => {
           <p>github.com/l-walaszczyk</p>
         </a>
       </LinksContainer>
+      <FormContainer>
+        <h1>{texts.contact.contactForm[lang]}</h1>
+        <ContactForm />
+
+        {/* <ContactForm
+          id="mainContactForm"
+          className="contactForm"
+          name="contactForm"
+          method="post"
+          action=""
+          content={{
+            your_name: "Twoje imię",
+            your_email: "Twój e-mail",
+            your_message: "Twoja wiadomość",
+            send_message: "Wyślij",
+          }}
+          language={lang}
+        /> */}
+      </FormContainer>
     </section>
   );
 };

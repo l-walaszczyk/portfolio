@@ -514,6 +514,68 @@ const texts = {
       },
     ],
   },
+  contact: {
+    contactForm: {
+      pl: "formularz kontaktowy",
+      en: "contact form",
+    },
+    send: {
+      pl: "wyślij",
+      en: "send",
+    },
+    success: {
+      pl: "wiadomość została wysłana",
+      en: "message sent successfully",
+    },
+    failure: {
+      pl: "wysyłanie wiadomości nie powiodło się",
+      en: "failed to send the message",
+    },
+    name: { pl: "twoje imię", en: "your name" },
+    email: { pl: "twój adres e-mail", en: "your e-mail address" },
+    message: { pl: "treść wiadomości", en: "message text" },
+    validationMessages: {
+      nameTooShort: {
+        pl: "wpisz imię",
+        en: "enter your name",
+      },
+      nameTooLong: {
+        pl: "imię może zawierać maksymalnie 25 znaków",
+        en: "name can be up to 25 characters long",
+      },
+      emailTooShort: {
+        pl: "wpisz adres e-mail",
+        en: "enter e-mail address",
+      },
+      emailInvalid: {
+        pl: "wpisz poprawny adres e-mail",
+        en: "enter a valid e-mail address",
+      },
+      messageTooShort: {
+        pl: "wpisz treść wiadomości",
+        en: "enter your message",
+      },
+      messageTooLong: {
+        pl: "wiadomość może zawiarać maksymalnie 1000 znaków",
+        en: "message can be up to 1000 characters long",
+      },
+    },
+    autoReply: {
+      subject: {
+        pl: "Dziękuję za wiadomość",
+        en: "Thank you for your message",
+      },
+      greetingNormal: { pl: "Dzień dobry", en: "Hi" },
+      greetingLate: { pl: "Dobry wieczór", en: "Hi" },
+      main: {
+        pl:
+          "Dziękuję za wiadomość. Postaram się odpowiedzieć najszybciej jak to możliwe.",
+        en:
+          "Thank you for your message. I will try to respond as soon as I can.",
+      },
+      regards: { pl: "Pozdrawiam", en: "Best regards" },
+    },
+  },
   error404: {
     title1: {
       pl: "Error404",
