@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components/macro";
+import variables from "./variables";
 
 // adobe palette #203149 #579DFF #11161F #FFBD3D #FFCE70
 
@@ -48,8 +49,9 @@ h1, h2, h3 {
 a, button {
  text-decoration: none;
  color: white;
- &:hover{
-  color: #FFCE70
+ &:hover, &:focus{
+  outline: none;
+  color: ${variables.hoverColor}
  }
 }
 
@@ -63,6 +65,12 @@ button {
  color: white;
  border: none;
  cursor: pointer;
+}
+
+form * {
+ font-family: Nunito, Sans-Serif;
+ /* font-weight: 300; */
+ font-size: 0.8rem;
 }
 `;
 

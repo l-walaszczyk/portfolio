@@ -33,10 +33,11 @@ const MenuButton = styled.button`
   color: white;
   border: none;
   font-size: 1.4rem;
+  text-decoration: ${({ isOpen }) => (isOpen ? "underline" : "none")};
 
-  &:hover {
+  /* &:hover {
     text-decoration: underline;
-  }
+  } */
 `;
 
 const Nav = styled.nav`
@@ -100,6 +101,7 @@ const HeaderMobile = () => {
         onClick={() => {
           toggleMenu(!menuOpen);
         }}
+        isOpen={menuOpen}
       >
         menu
       </MenuButton>

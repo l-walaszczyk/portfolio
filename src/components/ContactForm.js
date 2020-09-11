@@ -5,6 +5,34 @@ import texts from "../content/texts.js";
 import styled from "styled-components/macro";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 
+const FieldContainer = styled.div`
+  position: relative;
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    margin: 0.75rem 0;
+    padding: 0.2rem;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+`;
+
+const StyledErrorMessage = styled.p`
+  position: absolute;
+  font-size: 0.7rem;
+  /* color: red; */
+  top: -0.2rem;
+  left: 0;
+  /* transform: translateX(-50%); */
+`;
+
 const ContactForm = ({ className }) => {
   const [lang] = useContext(LangContext);
   const initialValues = { name: "", email: "", message: "" };
@@ -87,25 +115,31 @@ const ContactForm = ({ className }) => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
-        <Form noValidate>
-          <Field
-            type="name"
-            name="name"
-            placeholder={texts.contact.name[lang]}
-          />
-          <ErrorMessage name="name" component="div" />
-          <Field
-            type="email"
-            name="email"
-            placeholder={texts.contact.email[lang]}
-          />
-          <ErrorMessage name="email" component="div" />
-          <Field
-            as="textarea"
-            name="message"
-            placeholder={texts.contact.message[lang]}
-          />
-          <ErrorMessage name="message" component="div" />
+        <Form noValidate className={className}>
+          <FieldContainer>
+            <Field
+              type="name"
+              name="name"
+              placeholder={texts.contact.name[lang]}
+            />
+            <ErrorMessage name="name" component={StyledErrorMessage} />
+          </FieldContainer>
+          <FieldContainer>
+            <Field
+              type="email"
+              name="email"
+              placeholder={texts.contact.email[lang]}
+            />
+            <ErrorMessage name="email" component={StyledErrorMessage} />
+          </FieldContainer>
+          <FieldContainer>
+            <Field
+              as="textarea"
+              name="message"
+              placeholder={texts.contact.message[lang]}
+            />
+            <ErrorMessage name="message" component={StyledErrorMessage} />
+          </FieldContainer>
           <button type="submit" disabled={isSubmitting}>
             {texts.contact.send[lang]}
           </button>

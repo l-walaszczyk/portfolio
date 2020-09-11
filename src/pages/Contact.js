@@ -45,7 +45,22 @@ const LinksContainer = styled.div`
   }
 `;
 
-const FormContainer = styled.div``;
+const FormContainer = styled.div`
+  max-width: 20rem;
+  text-align: center;
+  margin: 2rem auto 1rem;
+  h1 {
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 0.5rem 0;
+  }
+
+  button {
+    text-align: center;
+  }
+`;
+
+const StyledContactForm = styled(ContactForm)``;
 
 const Contact = () => {
   const [lang] = useContext(LangContext);
@@ -80,7 +95,7 @@ const Contact = () => {
       </LinksContainer>
       <FormContainer>
         <h1>{texts.contact.contactForm[lang]}</h1>
-        <ContactForm />
+        <StyledContactForm />
 
         {/* <ContactForm
           id="mainContactForm"
