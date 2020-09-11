@@ -31,6 +31,9 @@ const App = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
 
+  const mainRef = createRef();
+  const scrollableNodeRef = createRef();
+
   const handleResize = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
@@ -49,14 +52,11 @@ const App = () => {
     };
   }, []);
 
-  const mainRef = createRef();
-  const simpleBarRef = createRef();
-
   return (
     <HashRouter basename="/">
       <LangProvider>
         <SimpleBar
-          ref={simpleBarRef}
+          scrollableNodeProps={{ ref: scrollableNodeRef }}
           style={{
             height: height - variables.headerHeight,
             width: "100vw",
@@ -75,7 +75,7 @@ const App = () => {
                 path="/projects"
                 exact
                 render={(props) => (
-                  <Projects {...props} simpleBarRef={simpleBarRef} />
+                  <Projects {...props} scrollableNodeRef={scrollableNodeRef} />
                 )}
               />
               <Route path="/contact" exact component={Contact} />

@@ -192,7 +192,7 @@ const MoreContainer = styled(ProjectMoreContainer)`
   }
 `;
 
-const Projects = ({ simpleBarRef }) => {
+const Projects = ({ scrollableNodeRef }) => {
   const [lang] = useContext(LangContext);
   const [flashImageWrapper, setFlashImageWrapper] = useState(false);
 
@@ -279,7 +279,7 @@ const Projects = ({ simpleBarRef }) => {
           <ImageGroupContainer>{imgs}</ImageGroupContainer>
           <P>{project.intro[lang]}</P>
         </IntroContainer>
-        <MoreContainer simpleBarRef={simpleBarRef}>
+        <MoreContainer scrollableNodeRef={scrollableNodeRef}>
           <div className="links-container">
             <h2>{texts.projects.links[lang]}</h2>
             <div className="www-container">{www}</div>

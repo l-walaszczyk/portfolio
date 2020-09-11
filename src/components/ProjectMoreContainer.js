@@ -21,15 +21,16 @@ const ButtonMoreLess = styled.button`
   }
 `;
 
-const ProjectMoreContainer = ({ children, className, simpleBarRef }) => {
+const ProjectMoreContainer = ({ children, className, scrollableNodeRef }) => {
   const [lang] = useContext(LangContext);
   const [moreOpen, setMoreOpen] = useState(false);
   const buttonRef = createRef();
 
   const handleMoreLessClick = () => {
     setMoreOpen(!moreOpen);
-    const simpleBarScrollElement = simpleBarRef.current.getScrollElement();
+    const simpleBarScrollElement = scrollableNodeRef.current;
     const projectsContainerElement = buttonRef.current.parentNode;
+
     setTimeout(
       () =>
         simpleBarScrollElement.scrollTo({
