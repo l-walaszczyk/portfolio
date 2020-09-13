@@ -6,15 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ProjectMoreContainer from "../components/ProjectMoreContainer";
-
-const importAll = (r) => {
-  let images = {};
-  r.keys().forEach((key) => {
-    images[key.replace("./", "")] = r(key);
-  });
-  return images;
-};
-
+import importAll from "../functions/importAll";
 const images = importAll(require.context("../content/images/projects", false));
 
 const ProjectContainer = styled.div`

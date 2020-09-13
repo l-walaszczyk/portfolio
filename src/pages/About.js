@@ -2,18 +2,31 @@ import React, { useContext } from "react";
 import { LangContext } from "../containers/Lang";
 import texts from "../content/texts.js";
 import styled from "styled-components/macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import present from "../content/images/present.jpg";
 import past from "../content/images/past.jpg";
-import interests from "../content/images/interests.jpg";
-
-// const Container = styled.div`
-// `;
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  Image,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+import importAll from "../functions/importAll";
+const carouselImages = importAll(
+  require.context("../content/images/carousel", false)
+);
 
 const ParagraphContainer = styled.div`
   padding: 4vh 0;
   margin: auto;
   width: 95vw;
   --p-lh: 1.15rem;
+  text-align: center;
 
   @media (min-width: 360px) {
     width: 340px;
@@ -36,6 +49,7 @@ const ParagraphContainer = styled.div`
   }
 
   h1 {
+    text-align: left;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
@@ -50,7 +64,6 @@ const ParagraphContainer = styled.div`
   div#present-img-container {
     float: right;
     margin-left: 0.5rem;
-    /* margin-bottom: -0.2rem; */
     height: calc(6.75 * var(--p-lh));
     width: calc(5.5 * var(--p-lh));
     overflow: hidden;
@@ -60,13 +73,12 @@ const ParagraphContainer = styled.div`
   }
 
   div#past-img-container {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 1rem auto 0;
+    width: 100%;
+    max-width: 360px;
 
     img {
-      max-width: 360px;
+      width: 100%;
     }
 
     div#caption {
@@ -81,14 +93,38 @@ const ParagraphContainer = styled.div`
   }
 
   div#interests-img-container {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 1rem auto 0;
+    width: 100%;
+    position: relative;
 
-    img {
-      max-width: 360px;
+    button {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      opacity: 0.4;
+      font-size: 2rem;
+      z-index: 20;
+      &.back {
+        left: 1%;
+      }
+      &.next {
+        right: 1%;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+      &:disabled {
+        display: none;
+      }
     }
+
+    /* div.img-wrapper { */
+    /* position: relative; */
+    img {
+      width: 100%;
+    }
+
+    /* } */
 
     div#caption {
       margin-top: 0.25rem;
@@ -105,9 +141,29 @@ const ParagraphContainer = styled.div`
 const About = () => {
   const [lang] = useContext(LangContext);
 
+  const slides = texts.about.interests.images.map((image, i, arr) => (
+    <Slide key={i} index={i}>
+      <div className="img-wrapper">
+        <Image src={carouselImages[image]} />
+        {/* {0 !== i && (
+          <ButtonBack className="back">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </ButtonBack>
+        )}
+        {arr.length !== i + 1 && (
+          <ButtonNext className="next">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </ButtonNext>
+        )} */}
+      </div>
+      <div id="caption">
+        <p>{texts.about.interests.imgCaptions[i][lang]}</p>
+      </div>
+    </Slide>
+  ));
+
   return (
     <section className="about">
-      {/* <Container> */}
       <ParagraphContainer>
         <h1>{texts.about.present.title[lang]}</h1>
         <div id="present-img-container">
@@ -128,14 +184,24 @@ const About = () => {
       <ParagraphContainer>
         <h1>{texts.about.interests.title[lang]}</h1>
         <p>{texts.about.interests.text[lang]}</p>
-        <div id="interests-img-container">
-          <img src={interests} alt={texts.about.interests.imgCaption[lang]} />
-          <div id="caption">
-            <p>{texts.about.interests.imgCaption[lang]}</p>
-          </div>
-        </div>
+        <CarouselProvider
+          visibleSlides={1}
+          totalSlides={6}
+          naturalSlideWidth={10}
+          naturalSlideHeight={9}
+          isPlaying={true}
+          interval={4000}
+          id="interests-img-container"
+        >
+          <ButtonBack className="back">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </ButtonBack>
+          <ButtonNext className="next">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </ButtonNext>
+          <Slider>{slides}</Slider>
+        </CarouselProvider>
       </ParagraphContainer>
-      {/* </Container> */}
     </section>
   );
 };

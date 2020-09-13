@@ -10,26 +10,17 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ContactForm from "../components/ContactForm";
 
 const LinksContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-  margin: auto;
-  max-width: 20rem;
-
-  @media (min-width: 1024px) {
-    max-width: 50rem;
-  }
+  margin: 1rem auto;
+  width: fit-content;
 
   a {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
-    margin: 0.5rem;
-    /* width: 15rem; */
+    margin: 2vh 0;
+
     & > * {
       flex-shrink: 0;
     }
@@ -39,28 +30,25 @@ const LinksContainer = styled.div`
     }
 
     p {
-      margin-left: 0.4rem;
+      margin-left: 0.5rem;
       font-size: 0.9rem;
     }
   }
 `;
 
 const FormContainer = styled.div`
+  width: 80vw;
+  height: 15.5rem;
   max-width: 20rem;
   text-align: center;
-  margin: 2rem auto 1rem;
+  margin: 4vh auto 1rem;
+
   h1 {
     font-size: 1.1rem;
     text-align: left;
-    margin: 0.5rem 0;
-  }
-
-  button {
-    text-align: center;
+    margin: 0.25rem 0;
   }
 `;
-
-const StyledContactForm = styled(ContactForm)``;
 
 const Contact = () => {
   const [lang] = useContext(LangContext);
@@ -95,22 +83,7 @@ const Contact = () => {
       </LinksContainer>
       <FormContainer>
         <h1>{texts.contact.contactForm[lang]}</h1>
-        <StyledContactForm />
-
-        {/* <ContactForm
-          id="mainContactForm"
-          className="contactForm"
-          name="contactForm"
-          method="post"
-          action=""
-          content={{
-            your_name: "Twoje imię",
-            your_email: "Twój e-mail",
-            your_message: "Twoja wiadomość",
-            send_message: "Wyślij",
-          }}
-          language={lang}
-        /> */}
+        <ContactForm />
       </FormContainer>
     </section>
   );

@@ -41,9 +41,9 @@ const texts = {
       },
       text: {
         pl:
-          "Jestem początkującym web developerem, samoukiem, który zdobywa praktyczną wiedzę poprzez przekrojowe, produkcyjne projekty. Dzięki uniwersalności JavaScript’u i nowym rozwiązaniom JAMstack jestem w stanie realizować projekty w zakresie front i back-endu. Moim stosem technologicznym jest MERN (MongoDB, Express.js, React.js, Node.js), ale uczę się także framework’a Angular.",
+          "Jestem początkującym web developerem, samoukiem, który zdobywa doświadczenie i praktyczną wiedzę tworząc projekty odpowiadające potrzebom rzeczywistych klientów - małych przedsiębiorstw. Dzięki uniwersalności JavaScript’u i nowym rozwiązaniom JAMstack jestem w stanie realizować projekty w zakresie front i back-endu. Moim stosem technologicznym jest MERN (MongoDB, Express.js, React.js, Node.js).",
         en:
-          "I’m a self-taught web developer who gains experience and practical knowledge by creating small-scale commercial projects. Thanks to the versatility of JavaScript and new JAMstack solutions I’m able tackle front-end as well as back-end of a project. My technology stack is MERN (MongoDB, Express.js, React.js, Node.js), but I’m also learning Angular framework.",
+          "I’m a self-taught web developer who gains experience and practical knowledge by creating projects which respond to needs of real clients - small businesses. Thanks to the versatility of JavaScript and new JAMstack solutions I’m able tackle front-end as well as back-end of a project. My technology stack is MERN (MongoDB, Express.js, React.js, Node.js).",
       },
       imgCaption: {
         pl: "Łukasz Walaszczyk - zdjęcie profilowe",
@@ -57,9 +57,9 @@ const texts = {
       },
       text: {
         pl:
-          "Z wykształcenia jestem mgr. inż. budownictwa. Zanim zająłem się programowaniem, zajmowałem się projektowaniem konstrukcji stalowych tworząc ich modele w technologii BIM (Building Information Modeling). Dostrzegając potencjał drzemiący w wirtualnych modelach tworzyłem parametryczne komponenty dla powtarzalnych elementów konstrukcji i automatyzowałem czynności dzięki makrom. To właśnie praca w BIM skierowała moje zainteresowania w stronę programowania.",
+          "Z wykształcenia jestem mgr. inż. budownictwa w specjalności konstrukcyjnej. Zanim zająłem się programowaniem, projektowałem konstrukcje stalowe tworząc ich modele w technologii BIM (Building Information Modeling). Dostrzegając potencjał drzemiący w wirtualnych modelach tworzyłem parametryczne komponenty dla powtarzalnych elementów konstrukcji i automatyzowałem czynności dzięki makrom (pisanym w C#). To właśnie praca w BIM skierowała moje zainteresowania w stronę programowania.",
         en:
-          "By education I am a MSc in Civil Engineering. Before I went into programming I had been designing steel structures by creating their models in BIM technology (Building Information Modeling). Recognizing the potential of the virtual models I created parametric components for repetitive elements and automated processes with macros. It was the work in BIM that directed my interest toward programming.",
+          "By education I am a MSc in civil engineering, specialty: structural engineering. Before I went into programming I had designed steel structures by creating their models in BIM technology (Building Information Modeling). Having recognized the potential of virtual models I was creating parametric components for repetitive elements and automating processes with macros (written in C#). It was the work in BIM that directed my interest toward programming.",
       },
       imgCaption: {
         pl: "Tekla Structures - oprogramowanie BIM, na którym pracowałem",
@@ -77,10 +77,43 @@ const texts = {
         en:
           "I like learining new skills and benefit from the opportunities that they create - that’s why I decided to pursue a career in IT industry. Besides programming, it’s similar with learning foreign languages and exploring the world - my hobbies. Below I publish a few photographs from my favourite journeys.",
       },
-      imgCaption: {
-        pl: "Amman, Jordania, październik 2019 r.",
-        en: "Amman, Jordan, October 2019",
-      },
+      images: [
+        "lisboa.jpg",
+        "marrakesh.jpg",
+        "wadi-rum.jpg",
+        "amman.jpg",
+        "wolin.jpg",
+        "hel.jpg",
+      ],
+      imgCaptions: [
+        {
+          pl: "Lizbona, Portugalia, grudzień 2017",
+          en: "Lisboa, Portugal, December 2017",
+        },
+        {
+          pl: "Marrakesz, Maroko, październik 2018",
+          en: "Marrakesh, Morocco, October 2018",
+        },
+        {
+          pl: "Wadi-Rum, Jordania, październik 2019",
+          en: "Wadi-Rum, Jordan, October 2019",
+        },
+        {
+          pl: "Amman, Jordania, październik 2019",
+          en: "Amman, Jordan, October 2019",
+        },
+        {
+          pl:
+            "Woliński Park Narodowy, podczas trasy rowerowej wzdłuż wybrzeża, sierpień 2020",
+          en:
+            "Wolin National Park, during a bicycle trip along the Polish coastline, August 2020",
+        },
+        {
+          pl: "Hel, koniec trasy rowerowej wzdłuż wybrzeża, sierpień 2020",
+          en:
+            "Hel, end of a bicycle trip along the Polish coastline, August 2020",
+        },
+      ],
     },
   },
   skills: [
@@ -297,8 +330,8 @@ const texts = {
                       oraz akceptacja regulaminów
                     </li>
                     <li>
-                      /w przypadku płatności online/ przekierowanie do serwisu
-                      Przelewy24
+                      Przekierowanie do serwisu Przelewy24 /w przypadku
+                      płatności online/
                     </li>
                     <li>
                       Wyświetlenie informacji o zapisaniu wizyty i przesłaniu
@@ -338,7 +371,7 @@ const texts = {
                       only online payment while some other have only payment in
                       person) and statute acceptance
                     </li>
-                    <li>/online payments only/ Redirecting to Przelewy24</li>
+                    <li>Redirecting to Przelewy24 /online payments only/</li>
                     <li>
                       Displaying information about saving the appointment and
                       sending a confirmational e-mail to the user, or - in case
@@ -523,21 +556,25 @@ const texts = {
       pl: "wyślij",
       en: "send",
     },
+    sending: {
+      pl: "wysyłanie",
+      en: "sending",
+    },
     success: {
-      pl: "wiadomość została wysłana",
-      en: "message sent successfully",
+      pl: "Wiadomość została wysłana",
+      en: "Message sent successfully",
     },
     failure: {
-      pl: "wysyłanie wiadomości nie powiodło się",
-      en: "failed to send the message",
+      pl: "Wysyłanie wiadomości nie powiodło się",
+      en: "Failed to send the message",
     },
-    name: { pl: "twoje imię", en: "your name" },
-    email: { pl: "twój adres e-mail", en: "your e-mail address" },
+    name: { pl: "imię", en: "name" },
+    email: { pl: "adres e-mail", en: "e-mail address" },
     message: { pl: "treść wiadomości", en: "message text" },
     validationMessages: {
       nameTooShort: {
         pl: "wpisz imię",
-        en: "enter your name",
+        en: "enter name",
       },
       nameTooLong: {
         pl: "imię może zawierać maksymalnie 25 znaków",
@@ -556,7 +593,7 @@ const texts = {
         en: "enter your message",
       },
       messageTooLong: {
-        pl: "wiadomość może zawiarać maksymalnie 1000 znaków",
+        pl: "wiadomość może zawiarać maks. 1000 znaków",
         en: "message can be up to 1000 characters long",
       },
     },

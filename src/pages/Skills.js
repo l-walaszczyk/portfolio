@@ -2,15 +2,7 @@ import React, { useContext } from "react";
 import { LangContext } from "../containers/Lang";
 import texts from "../content/texts.js";
 import styled from "styled-components/macro";
-
-const importAll = (r) => {
-  let svgs = {};
-  r.keys().forEach((key) => {
-    svgs[key.replace("./", "")] = r(key);
-  });
-  return svgs;
-};
-
+import importAll from "../functions/importAll";
 const svgs = importAll(require.context("../content/images", false, /\.svg$/));
 
 const Container = styled.div`

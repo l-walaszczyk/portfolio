@@ -49,8 +49,9 @@ h1, h2, h3 {
 a, button {
  text-decoration: none;
  color: white;
- &:hover, &:focus{
-  outline: none;
+ /* &:hover, &:focus{ */
+  /* outline: none; */
+ &:hover {
   color: ${variables.hoverColor}
  }
 }
@@ -69,7 +70,6 @@ button {
 
 form * {
  font-family: Nunito, Sans-Serif;
- /* font-weight: 300; */
  font-size: 0.8rem;
 }
 `;
