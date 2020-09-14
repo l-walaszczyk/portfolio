@@ -42,7 +42,7 @@ const ProjectMoreContainer = ({ children, className, scrollableNodeRef }) => {
     );
   };
 
-  console.log(scrollableNodeRef.current);
+  // console.log(scrollableNodeRef.current);
 
   return (
     <>

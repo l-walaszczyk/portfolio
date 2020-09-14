@@ -1,15 +1,14 @@
 import "focus-visible";
 import React, { useState, useEffect, createRef } from "react";
 import { LangProvider } from "./containers/Lang";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle";
-import ScrollToTop from "./components/ScrollToTop";
+import Tabs from "./components/Tabs";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Error404 from "./pages/Error404";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 import "./styles/simplebar-overrides.css";
@@ -68,6 +67,10 @@ const App = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    mainRef.current.scrollIntoView();
+  };
+
   return (
     <HashRouter basename="/">
       <LangProvider>
@@ -83,24 +86,36 @@ const App = () => {
           <GlobalStyle />
           <FocusVisible className="js-focus-visible focus-visible">
             <Main windowHeight={height} ref={mainRef}>
-              <ScrollToTop mainRef={mainRef} />
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/about" exact component={About} />
-                <Route path="/skills" exact component={Skills} />
-                <Route
-                  path="/projects"
-                  exact
-                  render={(props) => (
-                    <Projects
-                      {...props}
-                      scrollableNodeRef={scrollableNodeRef}
-                    />
-                  )}
-                />
-                <Route path="/contact" exact component={Contact} />
-                <Route component={Error404} />
-              </Switch>
+              <Tabs
+                scrollToTop={scrollToTop}
+                items={[
+                  {
+                    route: "",
+                    render: () => <Home />,
+                  },
+                  {
+                    route: "about",
+                    render: () => <About />,
+                  },
+                  {
+                    route: "skills",
+                    render: () => <Skills />,
+                  },
+                  {
+                    route: "projects",
+                    render: (props) => (
+                      <Projects
+                        {...props}
+                        scrollableNodeRef={scrollableNodeRef}
+                      />
+                    ),
+                  },
+                  {
+                    route: "contact",
+                    render: () => <Contact />,
+                  },
+                ]}
+              />
             </Main>
             <Footer />
           </FocusVisible>
