@@ -118,13 +118,9 @@ const ParagraphContainer = styled.div`
       }
     }
 
-    /* div.img-wrapper { */
-    /* position: relative; */
     img {
       width: 100%;
     }
-
-    /* } */
 
     div#caption {
       margin-top: 0.25rem;
@@ -145,16 +141,6 @@ const About = () => {
     <Slide key={i} index={i}>
       <div className="img-wrapper">
         <Image src={carouselImages[image]} />
-        {/* {0 !== i && (
-          <ButtonBack className="back">
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </ButtonBack>
-        )}
-        {arr.length !== i + 1 && (
-          <ButtonNext className="next">
-            <FontAwesomeIcon icon={faChevronRight} />
-          </ButtonNext>
-        )} */}
       </div>
       <div id="caption">
         <p>{texts.about.interests.imgCaptions[i][lang]}</p>
@@ -191,6 +177,8 @@ const About = () => {
           naturalSlideHeight={9}
           isPlaying={true}
           interval={4000}
+          lockOnWindowScroll={true}
+          touchEnabled={false}
           id="interests-img-container"
         >
           <ButtonBack className="back">

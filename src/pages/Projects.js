@@ -28,7 +28,6 @@ const H1 = styled.h1`
   font-size: 1rem;
   line-height: 1.1rem;
   margin: auto;
-  /* max-width: 55rem; */
 `;
 
 const IntroContainer = styled.div`
@@ -39,10 +38,6 @@ const IntroContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
-
-  /* @media (min-width: 1280px) {
-    width: 55rem;
-  } */
 `;
 
 const P = styled.p`
@@ -213,19 +208,6 @@ const Projects = ({ scrollableNodeRef }) => {
             <p>{project.www[i].replace("https://", "")}</p>
           </div>
         </ImageWrapper>
-
-        //{project.git[i] && (
-        //  <div className="url-item">
-        //    <a
-        //      target="_blank"
-        //      rel="noopener noreferrer"
-        //      href={project.git[i]}
-        //    >
-        //      <FontAwesomeIcon icon={faGithub} />
-        //      <p>{project.details[i].title[lang]}</p>
-        //    </a>
-        //  </div>
-        //)}
       );
     });
 

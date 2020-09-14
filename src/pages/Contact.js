@@ -38,7 +38,7 @@ const LinksContainer = styled.div`
 
 const FormContainer = styled.div`
   width: 80vw;
-  height: 15.5rem;
+  height: 15.15rem;
   max-width: 20rem;
   text-align: center;
   margin: 4vh auto 1rem;

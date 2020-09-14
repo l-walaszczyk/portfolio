@@ -42,6 +42,8 @@ const ProjectMoreContainer = ({ children, className, scrollableNodeRef }) => {
     );
   };
 
+  console.log(scrollableNodeRef.current);
+
   return (
     <>
       <div className={className}>{moreOpen && children}</div>

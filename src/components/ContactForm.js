@@ -12,8 +12,8 @@ const FieldContainer = styled.div`
   textarea {
     width: 100%;
     border: none;
-    margin: 0.75rem 0;
-    padding: 0.2rem;
+    margin: 0.7rem 0;
+    padding: 0.15rem;
     opacity: 0.7;
     box-sizing: border-box;
     border-radius: 0.1rem;
@@ -110,8 +110,8 @@ const ContactForm = ({ className }) => {
         finalValues[property] = value.trim();
       } else finalValues[property] = value;
     }
-
-    const isEvening = new Date().getHours() > 20 ? true : false;
+    const hoursNow = new Date().getHours();
+    const isEvening = hoursNow > 20 || hoursNow < 2 ? true : false;
 
     const templateParams = {
       name: finalValues.name,
