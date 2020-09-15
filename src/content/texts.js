@@ -147,7 +147,7 @@ const texts = {
         {
           name: "next",
           pl:
-            "Używam framework’a Next.js, gdy projekt wymaga renderingu po stronie serwera",
+            "Używam frameworka Next.js, gdy projekt wymaga renderingu po stronie serwera",
           en:
             "When a project requires server-side rendering I use Next.js framework.",
         },
@@ -171,7 +171,7 @@ const texts = {
         },
         {
           name: "node-express",
-          pl: "Tworzę back-end w Node.js, korzystam z framework’a Express",
+          pl: "Tworzę back-end w Node.js, korzystam z frameworka Express",
           en: "I develop back-end services in Node.js, I use Express framework",
         },
         {
