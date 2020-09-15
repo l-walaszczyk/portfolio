@@ -41,9 +41,9 @@ const texts = {
       },
       text: {
         pl:
-          "Jestem początkującym web developerem, samoukiem, który zdobywa doświadczenie i praktyczną wiedzę tworząc projekty odpowiadające potrzebom rzeczywistych klientów - małych przedsiębiorstw. Dzięki uniwersalności JavaScript’u i nowym rozwiązaniom JAMstack jestem w stanie realizować projekty w zakresie front i back-endu. Moim stosem technologicznym jest MERN (MongoDB, Express.js, React.js, Node.js).",
+          "Jestem początkującym web developerem, samoukiem, który zdobywa doświadczenie i praktyczną wiedzę poprzez przekrojowe, produkcyjne projekty dla małych przedsiębiorstw. Dzięki uniwersalności JavaScript’u i nowym rozwiązaniom JAMstack jestem w stanie realizować projekty w zakresie front i back-endu. Moim stosem technologicznym jest MERN (MongoDB, Express.js, React.js, Node.js), ale jestem otwarty na naukę innych technologii.",
         en:
-          "I’m a self-taught web developer who gains experience and practical knowledge by creating projects which respond to needs of real clients - small businesses. Thanks to the versatility of JavaScript and new JAMstack solutions I’m able tackle front-end as well as back-end of a project. My technology stack is MERN (MongoDB, Express.js, React.js, Node.js).",
+          "I’m a self-taught web developer who gains experience and practical knowledge by creating small-scale but comprehensive commercial projects for small businesses. Thanks to the versatility of JavaScript and new JAMstack solutions I’m able tackle front-end as well as back-end of a project. My technology stack is MERN (MongoDB, Express.js, React.js, Node.js), but I’m open to learning other technologies.",
       },
       imgCaption: {
         pl: "Łukasz Walaszczyk - zdjęcie profilowe",
@@ -83,7 +83,6 @@ const texts = {
         "wadi-rum.jpg",
         "amman.jpg",
         "wolin.jpg",
-        "hel.jpg",
       ],
       imgCaptions: [
         {
@@ -107,11 +106,6 @@ const texts = {
             "Woliński Park Narodowy, podczas trasy rowerowej wzdłuż wybrzeża, sierpień 2020",
           en:
             "Wolin National Park, during a bicycle trip along the Polish coastline, August 2020",
-        },
-        {
-          pl: "Hel, koniec trasy rowerowej wzdłuż wybrzeża, sierpień 2020",
-          en:
-            "Hel, end of a bicycle trip along the Polish coastline, August 2020",
         },
       ],
     },
@@ -238,6 +232,97 @@ const texts = {
       en: "Libraries/frameworks used:",
     },
     items: [
+      {
+        title: {
+          pl: (
+            <>
+              portfolio
+              <br />- własna strona-wizytówka
+            </>
+          ),
+          en: (
+            <>
+              portfolio
+              <br />- personal website
+            </>
+          ),
+        },
+
+        images: ["portfolio.jpg"],
+        www: ["https://l-walaszczyk.github.io/portfolio"],
+        wwwDescriptions: [
+          { pl: "strona startowa portfolio", en: "portfolio's home page" },
+        ],
+        git: ["https://github.com/l-walaszczyk/portfolio"],
+        gitDescriptions: [{ pl: "kod", en: "code" }],
+        intro: {
+          pl:
+            "Strona typu Single Page Application zawierająca informacje o mnie, technologiach, w jakich tworzę i projektach, które rozwijam.",
+          en:
+            "Single Page Application containing information about me, technologies I use and projects I develop.",
+        },
+        details: [
+          {
+            title: {
+              pl: "front-end",
+              en: "front-end",
+            },
+            libsFworks: [
+              "react",
+              "react-router",
+              "emailjs-com",
+              "focus-visible",
+              "formik",
+              "framer-motion",
+              "pure-react-carousel",
+              "simplebar-react",
+              "styled-components",
+              "three.js",
+              "vanta.js",
+            ],
+            text: {
+              pl: (
+                <>
+                  <p>
+                    Minimalistyczny design, inuicyjna nawigacja i czytelna treść
+                    - to zasady, którymi kierowałem się podczas tworzenia
+                    strony.
+                  </p>
+
+                  <p>
+                    Interaktywne, trójwymiarowe tło powstało dzięki bibliotece
+                    three.js i opartej na niej vanta.js. Ma za zadanie
+                    kontrastować z tekstem strony tworząc efekt przestrzeni i
+                    głębi. Zmiana podstrony uruchamia animację
+                    wygaszania/pojawiania się treści.
+                  </p>
+
+                  <p>Strona jest responsywna.</p>
+                </>
+              ),
+              en: (
+                <>
+                  <p>
+                    Minimalistic design, intuitive navigation and clear content
+                    - those were the principles guiding me during development of
+                    the website.
+                  </p>
+
+                  <p>
+                    Interactive, tridimensional background was achieved using
+                    three.js library and vanta.js which is based on it. The
+                    background is intended to contrast with content making an
+                    effect of space and depth. Changing routes triggers a
+                    fade-out/fade-in animation.
+                  </p>
+
+                  <p>The website is responsive</p>
+                </>
+              ),
+            },
+          },
+        ],
+      },
       {
         title: {
           pl: (
@@ -441,7 +526,7 @@ const texts = {
                   <p>
                     The appointment scheduler is designed to generate arrays
                     with available hours, save appointments in a database,
-                    cooperate with Przelewy24 API and send e-mail notification
+                    cooperate with Przelewy24 API and send e-mail notifications
                     to the users. Communication with the scheduler is achieved
                     by means of a RESTful API.
                   </p>
@@ -482,30 +567,32 @@ const texts = {
         title: {
           pl: (
             <>
-              portfolio
-              <br />- własna strona-wizytówka
+              Landing page
+              <br />
+              dla warsztatu elektromechanicznego
             </>
           ),
           en: (
             <>
-              portfolio
-              <br />- personal website
+              Landing page
+              <br />
+              for electric motor repair shop
             </>
           ),
         },
 
-        images: ["portfolio.jpg"],
-        www: ["https://l-walaszczyk.github.io/portfolio"],
+        images: ["protech.jpg"],
+        www: ["https://www.protech-gorzow.pl"],
         wwwDescriptions: [
-          { pl: "strona startowa portfolio", en: "portfolio's home page" },
+          { pl: "strona firmy Protech", en: "Protech firm's website" },
         ],
-        git: ["https://github.com/l-walaszczyk/portfolio"],
+        git: ["https://github.com/l-walaszczyk/protech"],
         gitDescriptions: [{ pl: "kod", en: "code" }],
         intro: {
           pl:
-            "Strona typu Single Page Application zawierająca informacje o mnie, technologiach, w jakich tworzę i projektach, które rozwijam.",
+            "Responsywna strona internetowa typu landing page, która powstała na początku mojej nauki front-endu, po ukończeniu kursów z podstaw html i css.",
           en:
-            "Single Page Application containing information about myself, technologies I use and projects I develop.",
+            "Responsive landing page, created at the beginning of my front-end education, after finishing html, css and basic JavaScript courses.",
         },
         details: [
           {
@@ -513,32 +600,27 @@ const texts = {
               pl: "front-end",
               en: "front-end",
             },
-            libsFworks: [
-              "react",
-              "react-transition-group",
-              "formik",
-              "styled-components",
-            ],
+            libsFworks: ["JQuery", "sass"],
             text: {
               pl: (
                 <>
                   <p>
-                    Minimalistyczny design, inuicyjna nawigacja i czytelna treść
-                    - tym kierowałem się podczas tworzenia strony.
+                    Zakres projektu obejmował, oprócz stworzenia strony, także
+                    odświeżenie starego logo firmy przy zachowaniu koloru i
+                    kroju czcionki, dobrze znanych klientom. Charakterystyne
+                    logo było punktem wyjścia do projektu wizualnego.
                   </p>
-
-                  <p>Strona jest responsywna</p>
                 </>
               ),
               en: (
                 <>
                   <p>
-                    Minimalistic design, intuitive navigation and clear content
-                    - those were the principle guiding me during website
-                    development.
+                    Project scope included, apart from creating the website,
+                    also graphic refreshment of the old firm's logo while
+                    maintaining the color and font well known to the clients.
+                    The characteristic logo was the starting point for the
+                    visual design.
                   </p>
-
-                  <p>The website is responsive</p>
                 </>
               ),
             },

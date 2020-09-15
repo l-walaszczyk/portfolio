@@ -104,11 +104,13 @@ const ParagraphContainer = styled.div`
       opacity: 0.4;
       font-size: 2rem;
       z-index: 20;
+      padding: 0.5rem;
+
       &.back {
-        left: 1%;
+        left: 0;
       }
       &.next {
-        right: 1%;
+        right: 0;
       }
       &:hover {
         opacity: 0.7;
@@ -172,13 +174,13 @@ const About = () => {
         <p>{texts.about.interests.text[lang]}</p>
         <CarouselProvider
           visibleSlides={1}
-          totalSlides={6}
+          totalSlides={5}
           naturalSlideWidth={10}
           naturalSlideHeight={9}
           isPlaying={true}
-          interval={4000}
-          lockOnWindowScroll={true}
-          touchEnabled={false}
+          interval={3500}
+          // lockOnWindowScroll={true}
+          // touchEnabled={false}
           id="interests-img-container"
         >
           <ButtonBack className="back">
@@ -187,7 +189,7 @@ const About = () => {
           <ButtonNext className="next">
             <FontAwesomeIcon icon={faChevronRight} />
           </ButtonNext>
-          <Slider>{slides}</Slider>
+          <Slider moveThreshold={0.05}>{slides}</Slider>
         </CarouselProvider>
       </ParagraphContainer>
     </section>
