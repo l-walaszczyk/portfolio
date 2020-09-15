@@ -590,7 +590,7 @@ const texts = {
         gitDescriptions: [{ pl: "kod", en: "code" }],
         intro: {
           pl:
-            "Responsywna strona internetowa typu landing page, która powstała na początku mojej nauki front-endu, po ukończeniu kursów z podstaw html i css.",
+            "Responsywna strona internetowa typu landing page, która powstała na początku mojej nauki front-endu, po ukończeniu kursów z html, css i podstaw JavaScript.",
           en:
             "Responsive landing page, created at the beginning of my front-end education, after finishing html, css and basic JavaScript courses.",
         },
