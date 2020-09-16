@@ -290,7 +290,7 @@ const texts = {
                   </p>
 
                   <p>
-                    Interaktywne, trójwymiarowe tło powstało dzięki bibliotece
+                    Dynamiczne, trójwymiarowe tło powstało dzięki bibliotece
                     three.js i opartej na niej vanta.js. Ma za zadanie
                     kontrastować z tekstem strony tworząc efekt przestrzeni i
                     głębi. Zmiana podstrony uruchamia animację
@@ -309,7 +309,7 @@ const texts = {
                   </p>
 
                   <p>
-                    Interactive, tridimensional background was achieved using
+                    Dynamic, tridimensional background was achieved using
                     three.js library and vanta.js which is based on it. The
                     background is intended to contrast with content making an
                     effect of space and depth. Changing routes triggers a

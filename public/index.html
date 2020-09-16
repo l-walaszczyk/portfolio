@@ -45,14 +45,14 @@
  <script>
   var wavesOptions = {
    el: "#bg",
-   mouseControls: true,
+   mouseControls: false,
    touchControls: false,
    gyroControls: false,
    scale: 2,
-   scaleMobile: 4,
+   scaleMobile: 3,
    color: 0x0e1928,
    shininess: 7,
-   waveSpeed: 0.20,
+   waveSpeed: 0.15,
    zoom: 1,
   };
 
@@ -61,7 +61,7 @@
     navigator.userAgent
    )
   ) {
-   wavesOptions.waveSpeed = 0.5;
+   wavesOptions.waveSpeed = 0.3;
   }
 
   var effect = VANTA.WAVES(wavesOptions);

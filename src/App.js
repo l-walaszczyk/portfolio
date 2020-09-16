@@ -43,15 +43,17 @@ const Main = styled.main`
 `;
 
 const App = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(document.documentElement.clientWidth);
+  const [height, setHeight] = useState(document.documentElement.clientHeight);
 
   const mainRef = createRef();
   const scrollableNodeRef = createRef();
 
   const handleResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
+    // setWidth(window.innerWidth);
+    // setHeight(window.innerHeight);
+    setWidth(document.documentElement.clientWidth);
+    setHeight(document.documentElement.clientHeight);
   };
 
   useEffect(() => {
