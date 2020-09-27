@@ -41,7 +41,7 @@ const texts = {
       },
       text: {
         pl:
-          "Jestem początkującym web developerem, samoukiem, który zdobywa doświadczenie i praktyczną wiedzę poprzez małoskalowe, lecz przekrojowe, komercyjne projekty dla małych przedsiębiorstw. Dzięki uniwersalności JavaScript’u i nowym rozwiązaniom JAMstack jestem w stanie realizować projekty w zakresie front i back-endu. Moim stosem technologicznym jest MERN (MongoDB, Express.js, React.js, Node.js), ale jestem otwarty na naukę innych technologii.",
+          "Jestem początkującym web developerem, samoukiem, który zdobywa doświadczenie i praktyczną wiedzę poprzez małoskalowe, lecz przekrojowe, komercyjne projekty dla małych przedsiębiorstw. Dzięki uniwersalności JavaScriptu i nowym rozwiązaniom JAMstack jestem w stanie realizować projekty w zakresie front i back-endu. Moim stosem technologicznym jest MERN (MongoDB, Express.js, React.js, Node.js), ale jestem otwarty na naukę innych technologii.",
         en:
           "I’m a self-taught web developer who gains experience and practical knowledge by creating small-scale but comprehensive commercial projects for small businesses. Thanks to the versatility of JavaScript and new JAMstack solutions I’m able tackle front-end as well as back-end of a project. My technology stack is MERN (MongoDB, Express.js, React.js, Node.js), but I’m open to learning other technologies.",
       },
